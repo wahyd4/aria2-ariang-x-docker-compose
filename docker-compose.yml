@@ -1,0 +1,24 @@
+version: '2'
+
+services:
+  db:
+    image: mysql:5.7
+    environment:
+      MYSQL_ROOT_PASSWORD: filerun
+      MYSQL_USER: filerun
+      MYSQL_PASSWORD: filerun
+      MYSQL_DATABASE: filerun
+    volumes:
+      - /Users/junv/test/app/db:/var/lib/mysql
+
+  web:
+    depends_on:
+      - db
+    links:
+      - db
+    image: afian/filerun
+    ports:
+      - "3000:80"
+    volumes:
+      - /Users/junv/test/app/html:/var/www/html
+      - /Users/junv/test/app/user-files:/user-files
