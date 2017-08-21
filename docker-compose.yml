@@ -9,7 +9,7 @@ services:
       MYSQL_PASSWORD: filerun
       MYSQL_DATABASE: filerun
     volumes:
-      - /Users/junv/test/app/db:/var/lib/mysql
+      - /Users/junv/db:/var/lib/mysql
 
   web:
     depends_on:
@@ -20,5 +20,13 @@ services:
     ports:
       - "3000:80"
     volumes:
-      - /Users/junv/test/app/html:/var/www/html
-      - /Users/junv/test/app/user-files:/user-files
+      # - share-data:/var/www/html
+      - /Users/junv/user-files:/user-files
+  aria2:
+    image: wahyd4/aria2-ariang
+    ports:
+      - "8000:80"
+      - "6800:6800"
+    volumes_from:
+      - web
+
