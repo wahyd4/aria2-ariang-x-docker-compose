@@ -10,7 +10,6 @@ services:
       MYSQL_DATABASE: filerun
     volumes:
       - /Users/junv/db:/var/lib/mysql
-
   web:
     depends_on:
       - db
