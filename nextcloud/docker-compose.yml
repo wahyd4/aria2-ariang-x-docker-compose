@@ -1,0 +1,20 @@
+version: '2'
+
+services:
+  nextcloud:
+    image: nextcloud
+    ports:
+      - "3000:80"
+    volumes_from:
+      - aria2
+    volumes:
+      - /data/nextcloud:/var/www/html/data
+  aria2:
+    image: wahyd4/aria2-ariang
+    ports:
+      - "8000:80"
+      - "6800:6800"
+    volumes:
+      - /data:/user-files
+
+
