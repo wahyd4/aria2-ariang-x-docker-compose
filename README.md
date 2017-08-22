@@ -34,6 +34,7 @@
     docker-compose up -d
   ```
   文件管理Filerun： <http://localhost:3000>
+
   AriaNg： <http://localhost:8000>
 
   * 使用 nextcloud 安装
@@ -43,6 +44,7 @@
     docker-compose up -d
   ```
   文件管理Nextcloud： <http://localhost:3000>
+
   AriaNg： <http://localhost:8000>
 ## 感谢
 
