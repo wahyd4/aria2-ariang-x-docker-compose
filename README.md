@@ -42,7 +42,8 @@
     docker-compose up -d
   ```
   一切搞定，尽情享受吧！
-  文件管理Filerun： <http://localhost:3000>
+
+  文件管理Filerun, 请使用 superuser / superuser 进行登录： <http://localhost:3000>
 
   AriaNg： <http://localhost:8000>
 
