@@ -49,7 +49,7 @@
 
   AriaNg： <http://localhost:8000>
 
-  Nextcloud 还需额外的一点手动操作
+  Nextcloud 还需额外的一点手动操作
 
 ## Nextcloud 配置 external-storage
   * 打开 http://ip:3000 使用你喜欢的密码进行登录，为了方便数据库保持默认选择
@@ -61,12 +61,13 @@
   ![Add external storage](https://raw.githubusercontent.com/wahyd4/aria2-ariang-x-docker-compose/master/images/nextcloud/config-storage.png)
 
   搞定，现在你通过 AriaNg 下载的文件就可以在 Nextcloud 里面查看到了。
+
   ![Files](https://raw.githubusercontent.com/wahyd4/aria2-ariang-x-docker-compose/master/images/nextcloud/downloads-folder.png)
 
 ## 感谢
 
-  * 创建 docker-compose 这个想法灵感源自于阅读 <https://www.v2ex.com/t/383801#reply68>
-  * 部分脚本来自 <https://doub.io/wlzy-30/>
+  * 创建 docker-compose 这个想法灵感源自于阅读了这帖子 <https://www.v2ex.com/t/383801>
+  * Aria2 Docker 镜像部分脚本来自 <https://doub.io/wlzy-30/>
 
 
 
