@@ -74,6 +74,11 @@
 
   这里的 docker-compose 文件，将本地的`/data` 目录作为了 docker volume 来存储下载的各类文件，因此你可以在`/data` 目录找到所有文件。
 
+## 如果你仅仅想使用 Aria2 + AriaNg
+  ```bash
+    docker run --rm  -p 8000:80  -p 6800:6800 -v ~/data/:/user-files wahyd4/aria2-ariang
+  ```
+  `8000` 本地则是你暴露出对外访问的 AriaNg 图形界面的端口， `~/data/` 是你所有通过 Aria2 下载的文件目录。
 ## VPS
 
   我在 Vultr 迈阿密节点建了一个 $2.5 的服务器来测试，速度还挺快的。为什么选迈阿密？ 因为电信节点日本和美国西部都不好用了，测试了一圈最近就迈阿密速度还挺高，虽然延迟比较高。
