@@ -37,7 +37,7 @@
 
   * 使用 Filerun 作为在线文件管理器：
   ```bash
-    git clone git@github.com:wahyd4/aria2-ariang-x-docker-compose.git
+    git clone https://github.com/wahyd4/aria2-ariang-x-docker-compose.git
     cd aria2-ariang-x-docker-compose/filerun
     docker-compose up -d
   ```
@@ -48,7 +48,7 @@
 
   * 使用 nextcloud 安装
   ```bash
-    git clone git@github.com:wahyd4/aria2-ariang-x-docker-compose.git
+    git clone https://github.com/wahyd4/aria2-ariang-x-docker-compose.git
     cd aria2-ariang-x-docker-compose/nextcloud
     docker-compose up -d
   ```
