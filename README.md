@@ -74,7 +74,7 @@
 
   我在 Vultr 迈阿密节点建了一个 $2.5 的服务器来测试，速度还挺快的。为什么选迈阿密？ 因为电信节点日本和美国西部都不好用了，测试了一圈最近就迈阿密速度还挺高，虽然延迟比较高。
 
-  欢迎使用我的推荐链接注册使用 Vultr。
+  欢迎使用我的推荐链接注册使用 Vultr。
 
   <a href="https://www.vultr.com/?ref=6908774"><img src="https://www.vultr.com/media/banner_2.png" width="468" height="60"></a>
 
