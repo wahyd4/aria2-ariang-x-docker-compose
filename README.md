@@ -27,6 +27,9 @@
     我更喜欢 Nextcloud。毕竟颜值更高，功能强大还有各种客户端，大家从下面的两种方式中选择一种就好。
 
 ## 使用
+
+  *提示* 如果你不是在本地安装，请记得替换 localhost 为你的 ip 或者绑定的域名哦！！
+
   * 安装 Docker CE (社区版)，不要使用 Ubuntu 等操作系统系统自带的安装包来安装，因为他们的版本都很老了。推荐使用[官方提供](https://docs.docker.com/engine/installation/linux/docker-ce/ubuntu/)的方式安装
 
   * 安装 Docker Compose <https://docs.docker.com/compose/install/#install-compose>
