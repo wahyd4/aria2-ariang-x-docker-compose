@@ -8,8 +8,8 @@ services:
       MYSQL_USER: filerun
       MYSQL_PASSWORD: filerun
       MYSQL_DATABASE: filerun
-    volumes:
-      - /data/db:/var/lib/mysql
+    # volumes:
+    #   - /data/db:/var/lib/mysql #mysql database
   web:
     depends_on:
       - db
