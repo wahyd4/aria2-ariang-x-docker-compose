@@ -12,6 +12,7 @@
 
 |比较类别 | Filerun | Nextcloud |
 |---- | --- | --- |
+|Docker 镜像大小| 约226M | 约104M |
 |是否轻量级| 轻量级 | 也比较轻量级 |
 |功能| 功能少 | 功能强大 |
 |UI| 一般 | 精美 |
@@ -57,7 +58,7 @@
 
   Nextcloud 还需额外的一点手动操作
 ## Nextcloud 配置 external-storage
-  * 打开 http://ip:3000 使用你喜欢的密码进行登录，为了方便数据库保持默认选择
+  * 打开 http://ip:3000 使用你喜欢的任意密码进行登录
   * 点击右上角 设置 -> 应用
   * 启用 External storage support 插件, 并输入密码确认
 

@@ -2,13 +2,13 @@ version: '2'
 
 services:
   nextcloud:
-    image: nextcloud
+    image: wonderfall/nextcloud
     ports:
-      - "3000:80"
+      - "3000:8888"
     volumes_from:
       - aria2
     volumes:
-      - /data/nextcloud:/var/www/html/data
+      - /data/nextcloud:/data
   aria2:
     image: wahyd4/aria2-ariang
     ports:
