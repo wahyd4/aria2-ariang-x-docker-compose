@@ -5,16 +5,18 @@ services:
     image: wonderfall/nextcloud
     ports:
       - "3000:8888"
-    volumes_from:
-      - aria2
     volumes:
       - /data/nextcloud:/data
+      - /data:/user-files
   aria2:
-    image: wahyd4/aria2-ariang
+    # image: wahyd4/aria2-ariang
+    image: aria2:latest
     ports:
       - "8000:80"
       - "6800:6800"
-    volumes:
-      - /data:/user-files
+    volumes_from:
+      - nextcloud
+    links:
+      - nextcloud:file-manager
 
 
