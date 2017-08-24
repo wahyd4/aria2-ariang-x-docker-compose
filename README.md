@@ -35,7 +35,7 @@
 
   * 安装 Docker Compose <https://docs.docker.com/compose/install/#install-compose>
 
-  * 使用 Filerun 作为在线文件管理器：
+  * 使用 **Filerun** 作为在线文件管理器：
   ```bash
     git clone https://github.com/wahyd4/aria2-ariang-x-docker-compose.git
     cd aria2-ariang-x-docker-compose/filerun
@@ -43,11 +43,11 @@
   ```
   一切搞定，尽情享受吧！
 
-  文件管理Filerun, 请使用 superuser / superuser 进行登录： <http://localhost:3000>
+  文件管理Filerun, 请使用 `superuser / superuser` 进行登录： <http://localhost:3000>
 
   AriaNg： <http://localhost:8000>
 
-  * 使用 nextcloud 安装
+  * 使用 **Nextcloud** 安装
   ```bash
     git clone https://github.com/wahyd4/aria2-ariang-x-docker-compose.git
     cd aria2-ariang-x-docker-compose/nextcloud
@@ -59,7 +59,7 @@
 
   Nextcloud 还需额外的一点手动操作
 ## Nextcloud 配置 external-storage
-  * 打开 http://ip:3000 使用你喜欢的任意密码进行登录
+  * 打开 http://ip:3000 `使用你喜欢的任意密码进行登录`
   * 点击右上角 设置 -> 应用
   * 启用 External storage support 插件, 并输入密码确认
 
