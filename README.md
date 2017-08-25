@@ -71,6 +71,14 @@
 
   ![Files](https://raw.githubusercontent.com/wahyd4/aria2-ariang-x-docker-compose/master/images/nextcloud/downloads-folder.png)
 
+## 升级
+  * 进入 filerun 或者 nextcloud 目录
+  ```bash
+  docker-compose stop # 将 docker 镜像暂时关掉
+  git pull origin master # 获取最近代码
+  docker-compose up -d # 运行最新版本的镜像
+  ```
+
 ## 高级特性
   * 使用`80`端口。 默认情况下，我们使用8000端口，而不是80端口，主要是防止你可能有其他程序需要使用80端口。但是你可以自己修改对外暴露的端口。
 
