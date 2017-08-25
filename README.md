@@ -72,6 +72,21 @@
   ![Files](https://raw.githubusercontent.com/wahyd4/aria2-ariang-x-docker-compose/master/images/nextcloud/downloads-folder.png)
 
 ## 高级特性
+  * 使用`80`端口。 默认情况下，我们使用8000端口，而不是80端口，主要是防止你可能有其他程序需要使用80端口。但是你可以自己修改对外暴露的端口。
+
+  打开 filerun 或者 nextcloud 下面的 `docker-compose.yml`。将 aria2 节点下面的 ports 属性的 `8000` 改为 `80` 即可。
+
+  ```yaml
+  aria2:
+    image: wahyd4/aria2-ariang:filerun
+    links:
+      - web:file-manager
+    ports:
+      - "8000:80" #将此处8000 改为 80端口
+      - "6800:6800"
+    volumes_from:
+      - web
+  ```
 
 ## 找到你下载的文件
 
