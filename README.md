@@ -35,7 +35,7 @@
 
   * 安装 Docker Compose <https://docs.docker.com/compose/install/#install-compose>
 
-  * 使用 **Filerun** 作为在线文件管理器：
+  ###  使用 **Filerun** 作为在线文件管理器：
   ```bash
     git clone https://github.com/wahyd4/aria2-ariang-x-docker-compose.git
     cd aria2-ariang-x-docker-compose/filerun
@@ -43,19 +43,19 @@
   ```
   一切搞定，尽情享受吧！
 
-  文件管理Filerun, 请使用 `superuser / superuser` 进行登录： <http://localhost:3000>
+  * 文件管理Filerun, 请使用 `superuser / superuser` 进行登录： <http://localhost:8000>
 
-  AriaNg： <http://localhost:8000>
+  * AriaNg： <http://localhost:8000/aria2>
 
-  * 使用 **Nextcloud** 安装
+  ### 使用 **Nextcloud** 安装
   ```bash
     git clone https://github.com/wahyd4/aria2-ariang-x-docker-compose.git
     cd aria2-ariang-x-docker-compose/nextcloud
     docker-compose up -d
   ```
-  文件管理Nextcloud： <http://localhost:3000>
+  * 文件管理Nextcloud： <http://localhost:8000>
 
-  AriaNg： <http://localhost:8000>
+  * AriaNg： <http://localhost:8000/aria2>
 
   Nextcloud 还需额外的一点手动操作
 ## Nextcloud 配置 external-storage
@@ -70,6 +70,8 @@
   搞定，现在你通过 AriaNg 下载的文件就可以在 Nextcloud 里面查看到了。
 
   ![Files](https://raw.githubusercontent.com/wahyd4/aria2-ariang-x-docker-compose/master/images/nextcloud/downloads-folder.png)
+
+## 高级特性
 
 ## 找到你下载的文件
 
