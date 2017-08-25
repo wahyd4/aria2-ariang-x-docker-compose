@@ -72,7 +72,7 @@
   ![Files](https://raw.githubusercontent.com/wahyd4/aria2-ariang-x-docker-compose/master/images/nextcloud/downloads-folder.png)
 
 ## 升级
-  * 进入 filerun 或者 nextcloud 目录
+  进入 filerun 或者 nextcloud 目录
   ```bash
   docker-compose stop # 将 docker 镜像暂时关掉
   git pull origin master # 获取最近代码
