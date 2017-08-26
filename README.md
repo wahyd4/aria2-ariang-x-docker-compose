@@ -5,7 +5,6 @@
 - [Aria2-AriaNg-X docker-compose](#aria2-ariang-x-docker-compose)
   - [为什么会有这个东西](#为什么会有这个东西)
   - [比较 Filerun 和 Nextcloud](#比较-filerun-和-nextcloud)
-  - [我的推荐](#我的推荐)
   - [安装与使用](#安装与使用)
   - [Nextcloud 配置 external-storage](#nextcloud-配置-external-storage)
   - [升级](#升级)
@@ -17,7 +16,11 @@
 
 <!-- /TOC -->
 
-这个项目是提供一个 docker-compose文件，让你可以一步就拥有一个集图形化界面的 Aria2下载（[AriaNg](https://github.com/mayswind/AriaNg)）和在线预览和管理文件的平台（[FileRun](https://www.filerun.com/) 或者 [Nextcloud](https://nextcloud.com/)）。
+这个项目是提供一个 docker-compose文件，让你可以一步就拥有一个集图形化界面的 Aria2下载（[AriaNg](https://github.com/mayswind/AriaNg)）和在线预览和管理文件的平台：
+  * [FileRun](https://www.filerun.com/)
+  * [Nextcloud](https://nextcloud.com/)
+  * [h5ai](https://larsjung.de/h5ai/)
+
 
 
 ## 为什么会有这个东西
@@ -27,22 +30,19 @@
 
 ## 比较 Filerun 和 Nextcloud
 
-|比较类别 | Filerun | Nextcloud |
-|---- | --- | --- |
-|Docker 镜像大小| 约226M | 约104M |
-|是否轻量级| 轻量级 | 也比较轻量级 |
-|功能| 功能少 | 功能强大 |
-|UI| 一般 | 精美 |
-|依赖| 必须要Mysql数据库 | 可以直接使用 内嵌SQLlite，也可以使用其他外置数据库 |
-|集成难度|全自动，无需人工操作|需要人工操作两步|
-|客户端|无|有移动和桌面客户端|
-|容器数量|mysql, filerun, aria2|nextcloud, aria2|
-|总结|轻量级|功能全面，本身可以作为一个很好的云盘使用|
+|比较类别 | Filerun | Nextcloud | h5ai|
+|---- | --- | --- | --- |
+|Docker 镜像大小| 226M | 104M | 21M |
+|是否轻量级| 轻量级 | 也比较轻量级 | 轻量级 |
+|功能| 功能少 | 功能强大 | 功能少 |
+|UI| 简洁 | 精美 | 简洁 |
+|依赖| 必须要Mysql数据库 | 可以直接使用 内嵌SQLlite，也可以使用其他外置数据库 | 无数据库 |
+|集成难度|全自动，无需人工操作|需要人工操作两步| 全自动 |
+|客户端|无|有移动和桌面客户端| 无|
+|登录安全|支持用户名密码登录|支持用户名密码登录| 无|
+|容器数量|mysql, filerun, aria2|nextcloud, aria2| h5ai, aria2 |
+|总结|轻量级|功能全面，本身可以作为一个很好的云盘使用| 仅提供文件列表，和查看文件，播放音视频文件功能 |
 
-
-## 我的推荐
-
-    我更喜欢 Nextcloud。毕竟颜值更高，功能强大还有各种客户端，大家从下面的两种方式中选择一种就好。
 
 ## 安装与使用
 
@@ -51,7 +51,17 @@
   * 安装 Docker CE (社区版)，不要使用 Ubuntu 等操作系统系统自带的安装包来安装，因为他们的版本都很老了。推荐使用[官方提供](https://docs.docker.com/engine/installation/linux/docker-ce/ubuntu/)的方式安装
 
   * 安装 Docker Compose <https://docs.docker.com/compose/install/#install-compose>
+  ### 使用 **h5ai** 作为在线文件查看和播放：
+  ```bash
+    git clone https://github.com/wahyd4/aria2-ariang-x-docker-compose.git
+    cd aria2-ariang-x-docker-compose/h5ai
+    docker-compose up -d
+  ```
+  搞定！
 
+  * 查看文件h5ai： <http://localhost:8000>
+
+  * AriaNg： <http://localhost:8000/aria2>
   ###  使用 **Filerun** 作为在线文件管理器：
   ```bash
     git clone https://github.com/wahyd4/aria2-ariang-x-docker-compose.git

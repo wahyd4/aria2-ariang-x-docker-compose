@@ -1,0 +1,18 @@
+version: '2'
+
+services:
+  h5ai:
+    image: bixidock/h5ai
+    volumes:
+      - /data:/var/www
+  aria2:
+    image: wahyd4/aria2-ariang:h5ai
+    ports:
+      - "8000:80"
+      - "6800:6800"
+    volumes_from:
+      - h5ai
+    links:
+      - h5ai:file-manager
+
+
