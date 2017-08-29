@@ -3,15 +3,14 @@
 <!-- TOC -->
 
 - [Aria2-AriaNg-X docker-compose](#aria2-ariang-x-docker-compose)
+  - [应用截图](#应用截图)
   - [为什么会有这个东西](#为什么会有这个东西)
   - [比较 Filerun 和 Nextcloud](#比较-filerun-和-nextcloud)
   - [安装与使用](#安装与使用)
-  - [Nextcloud 配置 external-storage](#nextcloud-配置-external-storage)
   - [升级](#升级)
   - [高级特性](#高级特性)
   - [找到你下载的文件](#找到你下载的文件)
   - [如果你仅仅想使用 Aria2 + AriaNg](#如果你仅仅想使用-aria2--ariang)
-  - [VPS](#vps)
   - [感谢](#感谢)
 
 <!-- /TOC -->
@@ -22,7 +21,7 @@
   * [h5ai](https://larsjung.de/h5ai/)
 
 
-
+## 应用截图
 ## 为什么会有这个东西
   * 使用 Docker-compose 让每个 docker 镜像只做一件事，则其本身会更加稳定，不易受其他组件的影响，也更方便管理
   * AriaNg 着实比之前的 Aria2 之前的其他图形化界面程序漂亮了太多。让人很喜欢。
@@ -84,19 +83,7 @@
 
   * AriaNg： <http://localhost:8000/aria2>
 
-  Nextcloud 还需额外的一点手动操作
-## Nextcloud 配置 external-storage
-  * 打开 http://ip:3000 `使用你喜欢的任意密码进行登录`
-  * 点击右上角 设置 -> 应用
-  * 启用 External storage support 插件, 并输入密码确认
-
-  ![plugin](https://raw.githubusercontent.com/wahyd4/aria2-ariang-x-docker-compose/master/images/nextcloud/external-storage.png)
-  * 点击右上角 设置 -> 管理 -> 外部存储 进行添加外部存储, Aria2 下载的文件会存在/user-files/ 目录下，存储类型选择本地存储，当存储添加成功，且可用时，最左端会显示出绿色。
-  ![Add external storage](https://raw.githubusercontent.com/wahyd4/aria2-ariang-x-docker-compose/master/images/nextcloud/config-storage.png)
-
-  搞定，现在你通过 AriaNg 下载的文件就可以在 Nextcloud 里面查看到了。
-
-  ![Files](https://raw.githubusercontent.com/wahyd4/aria2-ariang-x-docker-compose/master/images/nextcloud/downloads-folder.png)
+  Nextcloud 还需额外的一点手动操作，链接配置外部存储
 
 ## 升级
   进入 filerun 或者 nextcloud 目录
@@ -132,13 +119,6 @@
     docker run --rm  -p 8000:80  -p 6800:6800 -v ~/data/:/user-files wahyd4/aria2-ariang
   ```
   `8000` 本地则是你暴露出对外访问的 AriaNg 图形界面的端口， `~/data/` 是你所有通过 Aria2 下载的文件目录。
-## VPS
-
-  我在 Vultr 迈阿密节点建了一个 $2.5 的服务器来测试，速度还挺快的。为什么选迈阿密？ 因为电信节点日本和美国西部都不好用了，测试了一圈最近就迈阿密速度还挺高，虽然延迟比较高。
-
-  欢迎使用我的推荐链接注册使用 Vultr。
-
-  <a href="https://www.vultr.com/?ref=6908774"><img src="https://www.vultr.com/media/banner_2.png" width="468" height="60"></a>
 
 ## 感谢
 
