@@ -88,7 +88,7 @@
 
   * AriaNg： <http://localhost:8000/aria2>
 
-  Nextcloud 还需额外的一点手动操作，链接配置外部存储
+  Nextcloud 还需额外的一点手动操作，[链接配置外部存储](https://github.com/wahyd4/aria2-ariang-x-docker-compose/tree/master/nextcloud#nextcloud-配置-external-storage)
 
 ## 升级
   进入 filerun 或者 nextcloud 目录
