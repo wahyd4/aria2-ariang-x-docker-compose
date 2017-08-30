@@ -1,6 +1,6 @@
 # Aria2-AriaNg-X docker-compose
 
-[For English version]([中文](https://github.com/wahyd4/aria2-ariang-x-docker-compose/blob/master/README.en.md))
+[For English version](https://github.com/wahyd4/aria2-ariang-x-docker-compose/blob/master/README.en.md)
 
 <!-- TOC -->
 
