@@ -9,6 +9,7 @@ services:
     image: wahyd4/aria2-ariang:caddy-h5ai
     ports:
       - "8000:80"
+      - "443:443"
       - "6800:6800"
     volumes_from:
       - h5ai
