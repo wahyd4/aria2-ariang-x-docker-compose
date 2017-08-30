@@ -1,0 +1,126 @@
+# Aria2-AriaNg-X docker-compose
+
+[中文](https://github.com/wahyd4/aria2-ariang-x-docker-compose/blob/master/README.md)
+
+<!-- TOC -->
+
+- [Aria2-AriaNg-X docker-compose](#aria2-ariang-x-docker-compose)
+  - [Screenshots](#screenshots)
+  - [Why this repository](#why-this-repository)
+  - [Comparing among Filerun, h5ai and Nextcloud](#comparing-among-filerun-h5ai-and-nextcloud)
+  - [How to run](#how-to-run)
+  - [Upgrade](#upgrade)
+  - [Advanced features](#advanced-features)
+  - [Get your downloaded files](#get-your-downloaded-files)
+  - [If you just want to use Aria2 + AriaNg](#if-you-just-want-to-use-aria2--ariang)
+
+<!-- /TOC -->
+
+This repository contains several docker-compose files to help you running a Aria2 platform with UI ([AriaNg](https://github.com/mayswind/AriaNg)) and a online file management application. All the file management application are:
+  * [FileRun](https://www.filerun.com/)
+  * [Nextcloud](https://nextcloud.com/)
+  * [h5ai](https://larsjung.de/h5ai/)
+
+## Screenshots
+ * AriaNg ![AriaNg](https://raw.githubusercontent.com/wahyd4/aria2-ariang-x-docker-compose/master/images/ariang.png)
+ * Filerun ![filerun](https://raw.githubusercontent.com/wahyd4/aria2-ariang-x-docker-compose/master/images/filerun.png)
+ * h5ai ![h5ai](https://raw.githubusercontent.com/wahyd4/aria2-ariang-x-docker-compose/master/images/h5ai.png)
+ * nextcloud ![nextcloud](https://raw.githubusercontent.com/wahyd4/aria2-ariang-x-docker-compose/master/images/nextcloud.png)
+
+## Why this repository
+  * By using docker-compose, each container only do one thing and do it well.
+  * AriaNg is much better beautiful UI interface then any other similar application.
+  * You can preview, play, download your images and videos.
+
+
+## Comparing among Filerun, h5ai and Nextcloud
+
+|Category | Filerun | Nextcloud | h5ai|
+|---- | --- | --- | --- |
+|Docker image size| 226M | 104M | 21M |
+|if lightweight| yes | kind of | most lightweight |
+|functionalities| middle level | powerful | few |
+|UI| simple and beautiful | simple and elegant | simple |
+|dependencies| Mysql | You can use SQLite | no need db |
+|easy to use ?|no manual step|needs manual steps| no manual steps |
+|client |no |Mobile and desktop| no|
+|security|username and password|multiple kinds of users authentication| no|
+|containers count|mysql, filerun, aria2|nextcloud, aria2| h5ai, aria2 |
+|summary|lightweight and easy to use|powerful and beautiful| least functions|
+
+
+## How to run
+  *Notice* If you aren't do it in your local machine, please update the IP address with your real IP address!
+
+  * Install Docker CE first, [Official](https://docs.docker.com/engine/installation/linux/docker-ce/ubuntu/)
+
+  * Install Docker Compose <https://docs.docker.com/compose/install/#install-compose>
+  ### Using **h5ai** as the file managment application.
+  ```bash
+    git clone https://github.com/wahyd4/aria2-ariang-x-docker-compose.git
+    cd aria2-ariang-x-docker-compose/h5ai
+    docker-compose up -d
+  ```
+  done!
+
+  * h5ai： <http://localhost:8000>
+
+  * AriaNg： <http://localhost:8000/aria2/> Don't forget the last `/`, the other two docker-composes also need `/`.
+  ###  Using **Filerun** as the file managment application.
+  ```bash
+    git clone https://github.com/wahyd4/aria2-ariang-x-docker-compose.git
+    cd aria2-ariang-x-docker-compose/filerun
+    docker-compose up -d
+  ```
+  Bingo!
+
+  * Please use `superuser / superuser` as the username and password to login： <http://localhost:8000>
+
+  * AriaNg： <http://localhost:8000/aria2/>
+
+  ### Using **Nextcloud** as the file managment application
+  ```bash
+    git clone https://github.com/wahyd4/aria2-ariang-x-docker-compose.git
+    cd aria2-ariang-x-docker-compose/nextcloud
+    docker-compose up -d
+  ```
+  * Nextcloud： <http://localhost:8000>
+
+  * AriaNg： <http://localhost:8000/aria2/>
+
+  Nextcloud needs some more manual steps，[Configure external storage](https://github.com/wahyd4/aria2-ariang-x-docker-compose/tree/master/nextcloud#nextcloud-配置-external-storage)
+
+## Upgrade
+  go to the filerun/ h5ai/ nextcloud folder
+  ```bash
+  docker-compose stop # stop the containers
+  git pull origin master # pull latest code
+  docker-compose up -d # running the latest docker images
+  ```
+
+## Advanced features
+  * Using `80` port. By default we used `8000`  port, not the `80`， but you can use any port you want in one step.
+
+  Modify the docker-compose.yml you want, and update the port in field of `ports:`
+
+  ```yaml
+  aria2:
+    image: wahyd4/aria2-ariang:filerun
+    links:
+      - web:file-manager
+    ports:
+      - "8000:80" #change it to 80
+      - "6800:6800"
+    volumes_from:
+      - web
+  ```
+
+## Get your downloaded files
+  In docker-compose, we used `/data` as the docker volumn folder to storage all kinds of files. So you can find your files in `/data`
+
+## If you just want to use Aria2 + AriaNg
+  ```bash
+    docker run --rm  -p 8000:80  -p 6800:6800 -v ~/data/:/user-files wahyd4/aria2-ariang
+  ```
+  `8000` is the exposed port of AriaNg， `~/data/` is your files folder.
+

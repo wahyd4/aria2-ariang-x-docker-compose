@@ -1,11 +1,13 @@
 # Aria2-AriaNg-X docker-compose
 
+[For English version]([中文](https://github.com/wahyd4/aria2-ariang-x-docker-compose/blob/master/README.en.md))
+
 <!-- TOC -->
 
 - [Aria2-AriaNg-X docker-compose](#aria2-ariang-x-docker-compose)
   - [应用截图](#应用截图)
   - [为什么会有这个东西](#为什么会有这个东西)
-  - [比较 Filerun 和 Nextcloud](#比较-filerun-和-nextcloud)
+  - [比较 Filerun， h5ai 和 Nextcloud](#比较-filerun-h5ai-和-nextcloud)
   - [安装与使用](#安装与使用)
   - [升级](#升级)
   - [高级特性](#高级特性)
@@ -32,7 +34,7 @@
   * AriaNg 着实比之前的 Aria2 之前的其他图形化界面程序漂亮了太多。让人很喜欢。
   * 在线查看，预览下载的文件，让我们自己在自己 vps 上就可以拥有某些在线服务商提供的离线下载（迅雷、115）这样的功能。而且所有的控制权都在你手里，不用担心被删除资源
 
-## 比较 Filerun 和 Nextcloud
+## 比较 Filerun， h5ai 和 Nextcloud
 
 |比较类别 | Filerun | Nextcloud | h5ai|
 |---- | --- | --- | --- |
@@ -55,7 +57,7 @@
   * 安装 Docker CE (社区版)，不要使用 Ubuntu 等操作系统系统自带的安装包来安装，因为他们的版本都很老了。推荐使用[官方提供](https://docs.docker.com/engine/installation/linux/docker-ce/ubuntu/)的方式安装
 
   * 安装 Docker Compose <https://docs.docker.com/compose/install/#install-compose>
-  ### 使用 **h5ai** 作为在线文件查看和播放：
+  ### 使用 **h5ai** 作为在线文件查看和播放
   ```bash
     git clone https://github.com/wahyd4/aria2-ariang-x-docker-compose.git
     cd aria2-ariang-x-docker-compose/h5ai
@@ -66,7 +68,7 @@
   * 查看文件h5ai： <http://localhost:8000>
 
   * AriaNg： <http://localhost:8000/aria2/> 注意地址后面一定要带`/` 哦，后面两种方案的也是一样
-  ###  使用 **Filerun** 作为在线文件管理器：
+  ###  使用 **Filerun** 作为在线文件管理器
   ```bash
     git clone https://github.com/wahyd4/aria2-ariang-x-docker-compose.git
     cd aria2-ariang-x-docker-compose/filerun
@@ -91,7 +93,7 @@
   Nextcloud 还需额外的一点手动操作，[链接配置外部存储](https://github.com/wahyd4/aria2-ariang-x-docker-compose/tree/master/nextcloud#nextcloud-配置-external-storage)
 
 ## 升级
-  进入 filerun 或者 nextcloud 目录
+  进入 filerun, h5ai 或者 nextcloud 目录
   ```bash
   docker-compose stop # 将 docker 镜像暂时关掉
   git pull origin master # 获取最近代码
