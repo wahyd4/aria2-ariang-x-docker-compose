@@ -17,6 +17,9 @@ services:
       - DOMAIN=localhost:80
       - SSL=true
       - RPC_SECRET=Hello
+      - ARIA2_USER=admin
+      - ARIA2_PWD=password
+      - ENABLE_AUTH=true
     links:
       - h5ai:file-manager
 
