@@ -6,7 +6,7 @@ services:
     volumes:
       - /data:/var/www
   aria2:
-    image: wahyd4/aria2-ariang:caddy
+    image: wahyd4/aria2-ariang:caddy-h5ai
     ports:
       - "8000:80"
       - "443:443"
