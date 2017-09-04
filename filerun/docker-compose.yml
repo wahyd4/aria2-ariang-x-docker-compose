@@ -19,12 +19,20 @@ services:
     volumes:
       - /data:/user-files
   aria2:
-    image: wahyd4/aria2-ariang:filerun
+    image: wahyd4/aria2-ariang:caddy-filerun
     links:
       - web:file-manager
     ports:
       - "8000:80"
       - "6800:6800"
+      - "443:443"
+    environment:
+      - DOMAIN=localhost:80
+      # - SSL=true
+      # - RPC_SECRET=Hello
+      # - ARIA2_USER=admin
+      # - ARIA2_PWD=password
+      # - ENABLE_AUTH=true
     volumes_from:
       - web
 

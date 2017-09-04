@@ -11,8 +11,16 @@ services:
     ports:
       - "8000:80"
       - "6800:6800"
+      - "443:443"
     volumes_from:
       - nextcloud
+    environment:
+      - DOMAIN=localhost:80
+      # - SSL=true
+      # - RPC_SECRET=Hello
+      # - ARIA2_USER=admin
+      # - ARIA2_PWD=password
+      # - ENABLE_AUTH=true
     links:
       - nextcloud:file-manager
 
