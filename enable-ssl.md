@@ -15,7 +15,7 @@
 
 ### 添加域名管理处添加 `A` 记录
 
- 登录到你的域名 DNS 解析托管网站，在你需要绑定的域名下添加一条 `A` 记录，`IP` 指向 运行程序的网站
+ 登录到你的域名 DNS 解析托管网站，在你需要绑定的域名下添加一条 `A` 记录，`IP` 指向 运行程序的网站
 
  ![dns](https://raw.githubusercontent.com/wahyd4/aria2-ariang-x-docker-compose/master/images/ssl/dns.png)
 
@@ -27,7 +27,7 @@
 
   ![dns](https://raw.githubusercontent.com/wahyd4/aria2-ariang-x-docker-compose/master/images/ssl/ariang.png)
 
-  镜像中我们内置了aria2需要的 `certificate` 和 `key`，但由于是自签名的，默认情况下浏览器是不信任的状态。因为需要用户手动处理。
+  镜像中我们内置了aria2需要的 `certificate` 和 `key`，但由于是自签名的，默认情况下浏览器是不信任的状态。因为需要用户手动处理。
 
   访问 <https://你的域名:6800/jsonrpc>， 在 safari 中，在弹出的提示证书窗口中点击 `continue` 即可。 而在 chrome 中，需要点击继续请求的按钮。
 
@@ -41,5 +41,5 @@
   ```
   `certificate` 和 `key` 文件的名字必须是 `aria2.crt` 和 `aria2.key`
 
-  * 如何生成自己的 certificate 和 key： <https://github.com/ziahamza/webui-aria2/issues/108#issuecomment-176977431> 。当然最好还是从可信的证书提供商处购买证书。
+  * 如何生成自己的 certificate 和 key： <https://github.com/ziahamza/webui-aria2/issues/108#issuecomment-176977431> 。当然最好还是从可信的证书提供商处购买证书。
   * certificate和 key 文件的格式，请查考 Aria2 官网文档： <https://aria2.github.io/manual/en/html/aria2c.html#client-certificate-authorization-for-ssl-tls>
