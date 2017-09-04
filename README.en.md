@@ -99,7 +99,7 @@ This repository contains several docker-compose files to help you running a Aria
   ```
 
 ## Advanced features
-  * Using `80` port. By default we used `8000`  port, not the `80`， but you can use any port you want in one step.
+  * Using `80` port. By default we used `8000`  port, not the `80`， but you can use any port you want in one step.
 
   Modify the docker-compose.yml you want, and update the port in field of `ports:`
 
