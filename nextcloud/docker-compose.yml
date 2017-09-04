@@ -6,7 +6,6 @@ services:
     volumes:
       - /data/nextcloud:/data
       - /data:/user-files
-      # - /some_folder:/root/conf/key
   aria2:
     image: wahyd4/aria2-ariang:caddy-nextcloud
     ports:
@@ -15,6 +14,8 @@ services:
       - "443:443"
     volumes_from:
       - nextcloud
+    # volumes:
+    #   - /some_folder:/root/conf/key
     environment:
       - DOMAIN=localhost:80
       # - SSL=true

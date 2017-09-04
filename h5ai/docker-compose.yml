@@ -5,7 +5,6 @@ services:
     image: bixidock/h5ai
     volumes:
       - /data:/var/www
-      # - /some_folder:/root/conf/key
   aria2:
     image: wahyd4/aria2-ariang:caddy-h5ai
     ports:
@@ -14,6 +13,8 @@ services:
       - "6800:6800"
     volumes_from:
       - h5ai
+    # volumes:
+    #   - /some_folder:/root/conf/key
     environment:
       - DOMAIN=localhost:80
       # - SSL=true

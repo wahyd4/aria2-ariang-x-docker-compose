@@ -33,6 +33,8 @@ services:
       # - ARIA2_USER=admin
       # - ARIA2_PWD=password
       # - ENABLE_AUTH=true
+    # volumes:
+    #   - /some_folder:/root/conf/key
     volumes_from:
       - web
 
