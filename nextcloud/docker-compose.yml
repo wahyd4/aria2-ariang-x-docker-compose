@@ -7,7 +7,7 @@ services:
       - /data/nextcloud:/data
       - /data:/user-files
   aria2:
-    image: wahyd4/aria2-ariang:nextcloud
+    image: wahyd4/aria2-ariang:caddy-nextcloud
     ports:
       - "8000:80"
       - "6800:6800"
