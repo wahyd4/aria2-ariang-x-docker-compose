@@ -127,7 +127,7 @@
   3. 启用 HTTPS，为了实现该功能，我们采用 Caddy 来作为我们的 web 服务器和反向代理服务器。当我们绑定域名后，Caddy 自动为站点启用 HTTPS。也仅仅需要修改相应 `docker-compose.yaml`文件下 aria2服务的相关属性即可。（由于 filerun 程序本身的问题，目前暂不支持 HTTPS）
   ```yaml
     environment:
-      - DOMAIN=demo.toozhao.com #这里输入你想要绑定的域名， 必须首先在域名管理处添加 A 记录。当我们仅仅通过 ip 访问时则应该改为： localhost:80。端口不可去掉
+      - DOMAIN=demo.toozhao.com #这里输入你想要绑定的域名， 必须首先在域名管理处添加 A 记录。当我们仅仅通过 ip 访问时则应该改为： :80, 这表示绑定所有可以使用的 ip
       - SSL=true #当值为 true 时，系统会自动启用 HTTPS
       - RPC_SECRET=Hello #这个属性是 配置AriaNg 连接 Aria2 时需要，你可以输入你想要设置的密码。一旦设置了 HTTPS, Aria2 也只能使用 HTTPS。这时就必须使用该设置。
   ```
