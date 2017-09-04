@@ -101,9 +101,9 @@
   ```
 
 ## 高级特性
-  * 使用`80`端口。 默认情况下，我们使用8000端口，而不是80端口，主要是防止你可能有其他程序需要使用80端口。但是你可以自己修改对外暴露的端口。
+  1. 使用`80`端口。 默认情况下，我们使用8000端口，而不是80端口，主要是防止你可能有其他程序需要使用80端口。但是你可以自己修改对外暴露的端口。
 
-  打开 filerun 或者 nextcloud 下面的 `docker-compose.yml`。将 aria2 节点下面的 ports 属性的 `8000` 改为 `80` 即可。
+  打开 filerun，h5ai， nextcloud 下面的 `docker-compose.yml`。将 aria2 节点下面的 ports 属性的 `8000` 改为 `80` 即可。
 
   ```yaml
   aria2:
@@ -116,6 +116,22 @@
     volumes_from:
       - web
   ```
+  2. 对 AriaNg 启用 Basic Auth 登录密码验证，同样地，打开任何一个文件平台下面的 `docker-compose.yml`文件。 启用和修改aria2 服务下面的environment 相关属性：
+  ```yaml
+    environment:
+        - ARIA2_USER=admin #basic auth 用户名
+        - ARIA2_PWD=password #basic auth 密码
+        - ENABLE_AUTH=true # 是否启用用户名和密码验证, 默认情况下不启用，当该值为 false 时也不启用。
+  ```
+
+  3. 启用 HTTPS，为了实现该功能，我们采用 Caddy 来作为我们的 web 服务器和反向代理服务器。当我们绑定域名后，Caddy 自动为站点启用 HTTPS。也仅仅需要修改相应 `docker-compose.yaml`文件下 aria2服务的相关属性即可。（由于 filerun 程序本身的问题，目前暂不支持 HTTPS）
+  ```yaml
+    environment:
+      - DOMAIN=demo.toozhao.com #这里输入你想要绑定的域名， 必须首先在域名管理处添加 A 记录。当我们仅仅通过 ip 访问时则应该改为： localhost:80。端口不可去掉
+      - SSL=true #当值为 true 时，系统会自动启用 HTTPS
+      - RPC_SECRET=Hello #这个属性是 配置AriaNg 连接 Aria2 时需要，你可以输入你想要设置的密码。一旦设置了 HTTPS, Aria2 也只能使用 HTTPS。这时就必须使用该设置。
+  ```
+  由于配置 HTTPS比较麻烦，图文请参见[启用SSL](https://github.com/wahyd4/aria2-ariang-x-docker-compose/blob/master/enable-ssl.md)
 
 ## 找到你下载的文件
 

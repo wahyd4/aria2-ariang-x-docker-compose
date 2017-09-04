@@ -5,6 +5,7 @@ services:
     image: bixidock/h5ai
     volumes:
       - /data:/var/www
+      # - /some_folder:/root/conf/key
   aria2:
     image: wahyd4/aria2-ariang:caddy-h5ai
     ports:
@@ -15,11 +16,11 @@ services:
       - h5ai
     environment:
       - DOMAIN=localhost:80
-      - SSL=true
-      - RPC_SECRET=Hello
-      - ARIA2_USER=admin
-      - ARIA2_PWD=password
-      - ENABLE_AUTH=true
+      # - SSL=true
+      # - RPC_SECRET=Hello
+      # - ARIA2_USER=admin
+      # - ARIA2_PWD=password
+      # - ENABLE_AUTH=true
     links:
       - h5ai:file-manager
 
