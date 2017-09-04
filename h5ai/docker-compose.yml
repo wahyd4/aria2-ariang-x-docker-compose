@@ -16,7 +16,7 @@ services:
     # volumes:
     #   - /some_folder:/root/conf/key
     environment:
-      - DOMAIN=localhost:80
+      - DOMAIN=:80
       # - SSL=true
       # - RPC_SECRET=Hello
       # - ARIA2_USER=admin

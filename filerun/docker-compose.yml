@@ -27,7 +27,7 @@ services:
       - "6800:6800"
       - "443:443"
     environment:
-      - DOMAIN=localhost:80
+      - DOMAIN=:80
       # - SSL=true
       # - RPC_SECRET=Hello
       # - ARIA2_USER=admin
