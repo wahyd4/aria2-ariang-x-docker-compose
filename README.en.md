@@ -120,7 +120,8 @@ This repository contains several docker-compose files to help you running a Aria
 
 ## If you just want to use Aria2 + AriaNg
   ```bash
-    docker run --rm  -p 8000:80  -p 6800:6800 -v ~/data/:/user-files wahyd4/aria2-ariang
+    docker run --rm  -p 8000:80  -p 6800:6800 -v ~/data/:/data wahyd4/aria2-ariang
   ```
   `8000` is the exposed port of AriaNg， `~/data/` is your files folder.
 
+  More examples please refer: <https://github.com/wahyd4/aria2-ariang-docker>

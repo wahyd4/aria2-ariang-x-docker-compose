@@ -139,10 +139,11 @@
 
 ## 如果你仅仅想使用 Aria2 + AriaNg
   ```bash
-    docker run --rm  -p 8000:80  -p 6800:6800 -v ~/data/:/user-files wahyd4/aria2-ariang
+    docker run -d -p 8000:80  -p 6800:6800 -v ~/data/:/data wahyd4/aria2-ariang
   ```
   `8000` 本地则是你暴露出对外访问的 AriaNg 图形界面的端口， `~/data/` 是你所有通过 Aria2 下载的文件目录。
 
+  关于该镜像的更多使用介绍，请参考：<https://github.com/wahyd4/aria2-ariang-docker>
 ## 感谢
 
   * 创建 docker-compose 这个想法灵感源自于阅读了这帖子 <https://www.v2ex.com/t/383801>
