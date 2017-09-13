@@ -1,5 +1,5 @@
 ## Nextcloud 配置 external-storage
-  * 打开 http://ip:3000 `使用你喜欢的任意密码进行登录`
+  * 打开 <http://ip:8000> `使用你喜欢的任意密码进行登录`
   * 点击右上角 设置 -> 应用
   * 启用 External storage support 插件, 并输入密码确认
 
