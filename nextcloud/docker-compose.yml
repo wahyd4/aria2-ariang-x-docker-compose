@@ -6,6 +6,7 @@ services:
     volumes:
       - /data/nextcloud:/data
       - /data:/user-files
+    restart: always
   aria2:
     image: wahyd4/aria2-ariang:caddy-nextcloud
     ports:
@@ -25,5 +26,6 @@ services:
       # - ENABLE_AUTH=true
     links:
       - nextcloud:file-manager
+    restart: always
 
 

@@ -5,6 +5,7 @@ services:
     image: bixidock/h5ai
     volumes:
       - /data:/var/www
+    restart: always
   aria2:
     image: wahyd4/aria2-ariang:caddy-h5ai
     ports:
@@ -24,5 +25,5 @@ services:
       # - ENABLE_AUTH=true
     links:
       - h5ai:file-manager
-
+    restart: always
 

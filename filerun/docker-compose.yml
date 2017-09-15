@@ -8,6 +8,7 @@ services:
       MYSQL_USER: filerun
       MYSQL_PASSWORD: filerun
       MYSQL_DATABASE: filerun
+    restart: always
     # volumes:
     #   - /data/db:/var/lib/mysql #mysql database
   web:
@@ -18,6 +19,7 @@ services:
     image: afian/filerun
     volumes:
       - /data:/user-files
+    restart: always
   aria2:
     image: wahyd4/aria2-ariang:caddy-filerun
     links:
@@ -37,4 +39,5 @@ services:
     #   - /some_folder:/root/conf/key
     volumes_from:
       - web
+    restart: always
 
