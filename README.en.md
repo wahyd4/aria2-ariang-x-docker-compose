@@ -52,10 +52,10 @@ This repository contains several docker-compose files to help you running a Aria
 ## How to run
   *Notice* If you aren't do it in your local machine, please update the IP address with your real IP address!
 
-  * Install Docker CE first, [Official](https://docs.docker.com/engine/installation/linux/docker-ce/ubuntu/)
+  1. Install Docker CE first, [Official](https://docs.docker.com/engine/installation/linux/docker-ce/ubuntu/)
 
-  * Install Docker Compose <https://docs.docker.com/compose/install/#install-compose>
-  ### Using **h5ai** as the file managment application.
+  2. Install Docker Compose <https://docs.docker.com/compose/install/#install-compose>
+  #### Using **h5ai** as the file managment application.
   ```bash
     git clone https://github.com/wahyd4/aria2-ariang-x-docker-compose.git
     cd aria2-ariang-x-docker-compose/h5ai
@@ -63,10 +63,10 @@ This repository contains several docker-compose files to help you running a Aria
   ```
   done!
 
-  * h5ai： <http://localhost:8000>
+  1. h5ai： <http://localhost:8000>
 
-  * AriaNg： <http://localhost:8000/aria2/> Don't forget the last `/`, the other two docker-composes also need `/`.
-  ###  Using **Filerun** as the file managment application.
+  2. AriaNg： <http://localhost:8000/aria2/> Don't forget the last `/`, the other two docker-composes also need `/`.
+  ####  Using **Filerun** as the file managment application.
   ```bash
     git clone https://github.com/wahyd4/aria2-ariang-x-docker-compose.git
     cd aria2-ariang-x-docker-compose/filerun
@@ -74,19 +74,19 @@ This repository contains several docker-compose files to help you running a Aria
   ```
   Bingo!
 
-  * Please use `superuser / superuser` as the username and password to login： <http://localhost:8000>
+  1. Please use `superuser / superuser` as the username and password to login： <http://localhost:8000>
 
-  * AriaNg： <http://localhost:8000/aria2/>
+  2. AriaNg： <http://localhost:8000/aria2/>
 
-  ### Using **Nextcloud** as the file managment application
+  #### Using **Nextcloud** as the file managment application
   ```bash
     git clone https://github.com/wahyd4/aria2-ariang-x-docker-compose.git
     cd aria2-ariang-x-docker-compose/nextcloud
     docker-compose up -d
   ```
-  * Nextcloud： <http://localhost:8000>
+  1. Nextcloud： <http://localhost:8000>
 
-  * AriaNg： <http://localhost:8000/aria2/>
+  2. AriaNg： <http://localhost:8000/aria2/>
 
   Nextcloud needs some more manual steps，[Configure external storage](https://github.com/wahyd4/aria2-ariang-x-docker-compose/tree/master/nextcloud#nextcloud-配置-external-storage)
 

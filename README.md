@@ -54,10 +54,10 @@
 
   *提示* 如果你不是在本地安装，请记得替换 localhost 为你的 ip 或者绑定的域名哦！！
 
-  * 安装 Docker CE (社区版)，不要使用 Ubuntu 等操作系统系统自带的安装包来安装，因为他们的版本都很老了。推荐使用[官方提供](https://docs.docker.com/engine/installation/linux/docker-ce/ubuntu/)的方式安装
+  1. 安装 Docker CE (社区版)，不要使用 Ubuntu 等操作系统系统自带的安装包来安装，因为他们的版本都很老了。推荐使用[官方提供](https://docs.docker.com/engine/installation/linux/docker-ce/ubuntu/)的方式安装
 
-  * 安装 Docker Compose <https://docs.docker.com/compose/install/#install-compose>
-  ### 使用 **h5ai** 作为在线文件查看和播放
+  2. 安装 Docker Compose <https://docs.docker.com/compose/install/#install-compose>
+  #### 使用 **h5ai** 作为在线文件查看和播放
   ```bash
     git clone https://github.com/wahyd4/aria2-ariang-x-docker-compose.git
     cd aria2-ariang-x-docker-compose/h5ai
@@ -65,10 +65,10 @@
   ```
   搞定！
 
-  * 查看文件h5ai： <http://localhost:8000>
+  1. 查看文件h5ai： <http://localhost:8000>
 
-  * AriaNg： <http://localhost:8000/aria2/> 注意地址后面一定要带`/` 哦，后面两种方案的也是一样
-  ###  使用 **Filerun** 作为在线文件管理器
+  2. AriaNg： <http://localhost:8000/aria2/> 注意地址后面一定要带`/` 哦，后面两种方案的也是一样
+  ####  使用 **Filerun** 作为在线文件管理器
   ```bash
     git clone https://github.com/wahyd4/aria2-ariang-x-docker-compose.git
     cd aria2-ariang-x-docker-compose/filerun
@@ -76,19 +76,19 @@
   ```
   一切搞定，尽情享受吧！
 
-  * 文件管理Filerun, 请使用 `superuser / superuser` 进行登录： <http://localhost:8000>
+  1. 文件管理Filerun, 请使用 `superuser / superuser` 进行登录： <http://localhost:8000>
 
-  * AriaNg： <http://localhost:8000/aria2/>
+  2. AriaNg： <http://localhost:8000/aria2/>
 
-  ### 使用 **Nextcloud** 安装
+  #### 使用 **Nextcloud** 安装
   ```bash
     git clone https://github.com/wahyd4/aria2-ariang-x-docker-compose.git
     cd aria2-ariang-x-docker-compose/nextcloud
     docker-compose up -d
   ```
-  * 文件管理Nextcloud： <http://localhost:8000>
+  1. 文件管理Nextcloud： <http://localhost:8000>
 
-  * AriaNg： <http://localhost:8000/aria2/>
+  2. AriaNg： <http://localhost:8000/aria2/>
 
   Nextcloud 还需额外的一点手动操作，[链接配置外部存储](https://github.com/wahyd4/aria2-ariang-x-docker-compose/tree/master/nextcloud#nextcloud-配置-external-storage)
 
