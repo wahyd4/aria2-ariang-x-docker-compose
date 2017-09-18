@@ -94,6 +94,7 @@ This repository contains several docker-compose files to help you running a Aria
   go to the filerun/ h5ai/ nextcloud folder
   ```bash
   docker-compose stop # stop the containers
+  docker rmi -f <the docker image ID>  # delete the wahyd4/aria2-ariang docker image
   git pull origin master # pull latest code
   docker-compose up -d # running the latest docker images
   ```

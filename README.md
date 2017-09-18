@@ -96,6 +96,7 @@
   进入 filerun, h5ai 或者 nextcloud 目录
   ```bash
   docker-compose stop # 将 docker 镜像暂时关掉
+  docker rmi -f < 相关镜像 ID>  # 手动删除对应的 wahyd4/aria2-ariang docker 镜像
   git pull origin master # 获取最近代码
   docker-compose up -d # 运行最新版本的镜像
   ```
