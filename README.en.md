@@ -12,7 +12,7 @@
   - [Upgrade](#upgrade)
   - [Advanced features](#advanced-features)
   - [Get your downloaded files](#get-your-downloaded-files)
-  - [If you just want to use Aria2 + AriaNg](#if-you-just-want-to-use-aria2--ariang)
+  - [Just want to a standalone image?(e.g. Running in Synology NAS)](#just-want-to-a-standalone-imageeg-running-in-synology-nas)
 
 <!-- /TOC -->
 
@@ -119,10 +119,13 @@ This repository contains several docker-compose files to help you running a Aria
 ## Get your downloaded files
   In docker-compose, we used `/data` as the docker volumn folder to storage all kinds of files. So you can find your files in `/data`
 
-## If you just want to use Aria2 + AriaNg
+## Just want to a standalone image?(e.g. Running in Synology NAS)
   ```bash
-    docker run --rm  -p 8000:80  -p 6800:6800 -v ~/data/:/data wahyd4/aria2-ariang
+    docker run --rm  -p 8000:80  -p 6800:6800 -v ~/data/:/data wahyd4/aria2-ui
   ```
   `8000` is the exposed port of AriaNg， `~/data/` is your files folder.
+
+  * Aria2: <http://example.com>
+  * FileManger: <http://example.com/files>
 
   More examples please refer: <https://github.com/wahyd4/aria2-ariang-docker>
