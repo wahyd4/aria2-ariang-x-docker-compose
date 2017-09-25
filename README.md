@@ -143,8 +143,8 @@
     docker run -d -p 8000:80  -p 6800:6800 -v ~/data/:/data wahyd4/aria2-ui
   ```
   `8000` 本地则是你暴露出对外访问的 AriaNg 图形界面的端口， `~/data/` 是你所有通过 Aria2 下载的文件目录。
-  * Aria2: <http://example.com>
-  * FileManger: <http://example.com/files>
+  * Aria2: <http://localhost:8000>
+  * FileManger: <http://localhost:8000/files>
   关于该镜像的更多使用介绍，请参考：<https://github.com/wahyd4/aria2-ariang-docker>
 ## 感谢
 

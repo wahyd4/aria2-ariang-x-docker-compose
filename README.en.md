@@ -125,7 +125,7 @@ This repository contains several docker-compose files to help you running a Aria
   ```
   `8000` is the exposed port of AriaNg， `~/data/` is your files folder.
 
-  * Aria2: <http://example.com>
-  * FileManger: <http://example.com/files>
+  * Aria2: <http://localhost:8000>
+  * FileManger: <http://localhost:8000/files>
 
   More examples please refer: <https://github.com/wahyd4/aria2-ariang-docker>
