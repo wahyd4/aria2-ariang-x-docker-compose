@@ -1,20 +1,19 @@
 version: '2'
 
 services:
-  nextcloud:
-    image: wonderfall/nextcloud
+  h5ai:
+    image: bixidock/h5ai
     volumes:
-      - /data/nextcloud:/data
-      - /data:/user-files
+      - /data:/var/www
     restart: always
   aria2:
-    image: wahyd4/aria2-ariang:caddy-nextcloud
+    image: wahyd4/aria2-ariang:caddy-h5ai
     ports:
       - "8000:80"
-      - "6800:6800"
       - "443:443"
+      - "6800:6800"
     volumes_from:
-      - nextcloud
+      - h5ai
     # volumes:
     #   - /some_folder:/root/conf/key
     environment:
@@ -25,7 +24,6 @@ services:
       # - ARIA2_PWD=password
       # - ENABLE_AUTH=true
     links:
-      - nextcloud:file-manager
+      - h5ai:file-manager
     restart: always
-
 

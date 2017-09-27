@@ -8,6 +8,7 @@ services:
       MYSQL_USER: filerun
       MYSQL_PASSWORD: filerun
       MYSQL_DATABASE: filerun
+    restart: always
     # volumes:
     #   - /data/db:/var/lib/mysql #mysql database
   web:
@@ -18,13 +19,25 @@ services:
     image: afian/filerun
     volumes:
       - /data:/user-files
+    restart: always
   aria2:
-    image: wahyd4/aria2-ariang:filerun
+    image: wahyd4/aria2-ariang:caddy-filerun
     links:
       - web:file-manager
     ports:
       - "8000:80"
       - "6800:6800"
+      - "443:443"
+    environment:
+      - DOMAIN=:80
+      # - SSL=true
+      # - RPC_SECRET=Hello
+      # - ARIA2_USER=admin
+      # - ARIA2_PWD=password
+      # - ENABLE_AUTH=true
+    # volumes:
+    #   - /some_folder:/root/conf/key
     volumes_from:
       - web
+    restart: always
 
