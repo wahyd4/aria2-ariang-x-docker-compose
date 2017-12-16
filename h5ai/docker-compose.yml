@@ -7,7 +7,7 @@ services:
       - /data:/var/www
     restart: always
   aria2:
-    image: wahyd4/aria2-ariang:caddy-h5ai
+    image: wahyd4/aria2-ui:h5ai
     ports:
       - "8000:80"
       - "443:443"

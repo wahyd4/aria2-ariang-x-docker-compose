@@ -21,7 +21,7 @@ services:
       - /data:/user-files
     restart: always
   aria2:
-    image: wahyd4/aria2-ariang:caddy-filerun
+    image: wahyd4/aria2-ui:filerun
     links:
       - web:file-manager
     ports:
