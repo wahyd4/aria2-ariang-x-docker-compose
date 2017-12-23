@@ -12,6 +12,7 @@
   - [Upgrade](#upgrade)
   - [Advanced features](#advanced-features)
   - [Get your downloaded files](#get-your-downloaded-files)
+  - [Questions](#questions)
   - [Just want to a standalone image?(e.g. Running in Synology NAS)](#just-want-to-a-standalone-imageeg-running-in-synology-nas)
 
 <!-- /TOC -->
@@ -119,6 +120,9 @@ This repository contains several docker-compose files to help you running a Aria
 ## Get your downloaded files
   In docker-compose, we used `/data` as the docker volumn folder to storage all kinds of files. So you can find your files in `/data`
 
+## Questions
+
+  * Have no rights to manage the files you downloaded? Considering using `root` user to run docker program. Please refer: <https://askubuntu.com/questions/477551/how-can-i-use-docker-without-sudo>
 ## Just want to a standalone image?(e.g. Running in Synology NAS)
   ```bash
     docker run --rm  -p 8000:80  -p 6800:6800 -v ~/data/:/data wahyd4/aria2-ui
