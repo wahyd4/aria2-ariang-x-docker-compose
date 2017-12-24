@@ -141,9 +141,9 @@
 
 ## 只想运行一个镜像？(如：在群晖中运行)
   ```bash
-    docker run -d -p 8000:80  -p 6800:6800 -v ~/data/:/data wahyd4/aria2-ui
+    docker run -d -p 8000:80 -p 6800:6800 -v ~/data:/data -v ~/aria2.conf:/root/conf/aria2.conf wahyd4/aria2-ui
   ```
-  `8000` 本地则是你暴露出对外访问的 AriaNg 图形界面的端口， `~/data/` 是你所有通过 Aria2 下载的文件目录。
+  `8000` 本地则是你暴露出对外访问的 AriaNg 图形界面的端口， `~/data/` 是你所有通过 Aria2 下载的文件目录, `~/aria2.conf` 则是你自己的 aria2.conf 配置文件地址。
   * Aria2: <http://localhost:8000>
   * FileManger: <http://localhost:8000/files>
 

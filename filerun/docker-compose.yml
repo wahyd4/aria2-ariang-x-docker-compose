@@ -37,6 +37,7 @@ services:
       # - ENABLE_AUTH=true
     # volumes:
     #   - /some_folder:/root/conf/key
+    #   - ~/test/aria2.conf:/root/conf/aria2.conf
     volumes_from:
       - web
     restart: always

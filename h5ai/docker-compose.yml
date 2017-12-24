@@ -16,6 +16,7 @@ services:
       - h5ai
     # volumes:
     #   - /some_folder:/root/conf/key
+    #   - ~/test/aria2.conf:/root/conf/aria2.conf
     environment:
       - DOMAIN=:80
       # - SSL=true
