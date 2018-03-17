@@ -87,7 +87,7 @@
     cd aria2-ariang-x-docker-compose/nextcloud
     docker-compose up -d
   ```
-  1. 文件管理Nextcloud： <http://localhost:8000>
+  1. 文件管理Nextcloud： <http://localhost:8000>， 使用你喜欢的任意用户名和密码登录
 
   2. AriaNg： <http://localhost:8000/aria2/>
 
