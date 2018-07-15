@@ -4,8 +4,8 @@ services:
   nextcloud:
     image: nextcloud
     volumes:
-      - /data/nextcloud:/var/www/html
-      - /data:/user-files
+      - ~/data/nextcloud:/var/www/html:rw
+      - ~/data:/user-files:rw
     restart: always
   aria2:
     image: wahyd4/aria2-ui:nextcloud
