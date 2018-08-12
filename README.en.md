@@ -9,6 +9,9 @@
   - [Why this repository](#why-this-repository)
   - [Comparing among Filerun, h5ai and Nextcloud](#comparing-among-filerun-h5ai-and-nextcloud)
   - [How to run](#how-to-run)
+      - [Using **h5ai** as the file managment application.](#using-h5ai-as-the-file-managment-application)
+      - [Using **Filerun** as the file managment application.](#using-filerun-as-the-file-managment-application)
+      - [Using **Nextcloud** as the file managment application](#using-nextcloud-as-the-file-managment-application)
   - [Upgrade](#upgrade)
   - [Advanced features](#advanced-features)
   - [Get your downloaded files](#get-your-downloaded-files)
@@ -23,10 +26,12 @@ This repository contains several docker-compose files to help you running a Aria
   * [h5ai](https://larsjung.de/h5ai/)
 
 ## Screenshots
- * AriaNg ![AriaNg](https://raw.githubusercontent.com/wahyd4/aria2-ariang-x-docker-compose/master/images/ariang.png)
- * Filerun ![filerun](https://raw.githubusercontent.com/wahyd4/aria2-ariang-x-docker-compose/master/images/filerun.png)
- * h5ai ![h5ai](https://raw.githubusercontent.com/wahyd4/aria2-ariang-x-docker-compose/master/images/h5ai.png)
- * nextcloud ![nextcloud](https://raw.githubusercontent.com/wahyd4/aria2-ariang-x-docker-compose/master/images/nextcloud.png)
+Name|Screenshot
+:----: | :---:
+ AriaNg|![AriaNg](https://raw.githubusercontent.com/wahyd4/aria2-ariang-x-docker-compose/master/images/ariang.png)
+ Filerun|![filerun](https://raw.githubusercontent.com/wahyd4/aria2-ariang-x-docker-compose/master/images/filerun.png)
+ h5ai|![h5ai](https://raw.githubusercontent.com/wahyd4/aria2-ariang-x-docker-compose/master/images/h5ai.png)
+nextcloud|![nextcloud](https://raw.githubusercontent.com/wahyd4/aria2-ariang-x-docker-compose/master/images/nextcloud.png)
 
 ## Why this repository
   * By using docker-compose, each container only do one thing and do it well.
