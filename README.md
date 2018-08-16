@@ -94,6 +94,8 @@ nextcloud|![nextcloud](https://raw.githubusercontent.com/wahyd4/aria2-ariang-x-d
 
   Nextcloud 还需额外的一点手动操作，[链接配置外部存储](https://github.com/wahyd4/aria2-ariang-x-docker-compose/tree/master/nextcloud#nextcloud-配置-external-storage)
 
+  > **注意**: 由于 Nextcloud 镜像启动较慢，平均需要3分钟左右，在启动之前访问会得到`502`错误，请耐心等待一下
+
 ## 升级
   进入 filerun, h5ai 或者 nextcloud 目录
   ```bash
