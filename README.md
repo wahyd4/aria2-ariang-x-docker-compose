@@ -13,7 +13,7 @@
   - [高级特性](#高级特性)
   - [找到你下载的文件](#找到你下载的文件)
   - [只想运行一个镜像？(如：在群晖中运行)](#只想运行一个镜像如在群晖中运行)
-  - [常见问题](#常见问题)
+  - [常见问题 FAQ](#常见问题)
   - [感谢](#感谢)
 
 <!-- /TOC -->
@@ -152,9 +152,11 @@ nextcloud|![nextcloud](https://raw.githubusercontent.com/wahyd4/aria2-ariang-x-d
 
   关于该镜像的更多使用介绍，请参考：<https://github.com/wahyd4/aria2-ariang-docker>
 
-## 常见问题
+## 常见问题 FAQ
 
   * 没有权限管理下载的文件？ 请考虑使用 `root` 用户运行 docker 程序。延伸阅读： <https://askubuntu.com/questions/477551/how-can-i-use-docker-without-sudo>
+  * AriaNg 界面不能显示？请记住目前在访问 AriaNg 界面的时候，地址最后一定要添加 `/`
+  * Nextcloud 不能访问？页面显示`502`？， 由于 Nextcloud 启动耗时较长，大致为`3`分钟左右，请耐心等待。如果3分钟之后依然不能显示，请查看`nextcloud`的 Docker 容器是否有错误日志输出，如果没有，再稍等多等一下即可。
 ## 感谢
 
   * 创建 docker-compose 这个想法灵感源自于阅读了这帖子 <https://www.v2ex.com/t/383801>
