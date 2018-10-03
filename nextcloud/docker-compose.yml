@@ -4,8 +4,8 @@ services:
   nextcloud:
     image: wonderfall/nextcloud
     volumes:
-      - ~/data/nextcloud:/data:rw
-      - ~/data:/user-files:rw
+      - ./data/nextcloud:/data:rw
+      - ./data:/user-files:rw
     restart: always
   aria2:
     image: wahyd4/aria2-ui:nextcloud
@@ -13,8 +13,8 @@ services:
       - "8000:80"
       - "6800:6800"
       - "443:443"
-    volumes_from:
-      - nextcloud
+    volumes:
+      - ./data:/user-files:rw
     # volumes:
     #   - /some_folder:/root/conf/key
     #   - ~/test/aria2.conf:/root/conf/aria2.conf
