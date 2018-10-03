@@ -140,7 +140,7 @@ nextcloud|![nextcloud](https://raw.githubusercontent.com/wahyd4/aria2-ariang-x-d
 
 ## 找到你下载的文件
 
-  这里的 docker-compose 文件，将本地的`/data` 目录作为了 docker volume 来存储下载的各类文件，因此你可以在`/data` 目录找到所有文件。
+  这里的 docker-compose 文件，将本地的`./data` 目录作为了 docker volume 来存储下载的各类文件，因此你可以在 `docker-compose` 文件所在目录`data` 子目录目录找到所有文件。你也可以根据自己的需要修改目录设置
 
 ## 只想运行一个镜像？(如：在群晖中运行)
   ```bash

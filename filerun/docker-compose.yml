@@ -18,7 +18,7 @@ services:
       - db
     image: afian/filerun
     volumes:
-      - /data:/user-files:rw
+      - ./data:/user-files:rw
     restart: always
   aria2:
     image: wahyd4/aria2-ui:filerun
@@ -38,7 +38,7 @@ services:
     # volumes:
     #   - /some_folder:/root/conf/key
     #   - ~/test/aria2.conf:/root/conf/aria2.conf
-    volumes_from:
-      - web
+    volumes:
+      - ./data:/user-files:rw
     restart: always
 
