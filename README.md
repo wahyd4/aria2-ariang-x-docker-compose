@@ -14,7 +14,7 @@
   - [找到你下载的文件](#找到你下载的文件)
   - [只想运行一个镜像？(如：在群晖中运行)](#只想运行一个镜像如在群晖中运行)
   - [常见问题 FAQ](#常见问题-faq)
-  - [One more things](#one-more-things)
+  - [One more thing](#one-more-thing)
     - [快速运行](#快速运行)
   - [感谢](#感谢)
 
@@ -160,7 +160,7 @@ nextcloud|![nextcloud](https://raw.githubusercontent.com/wahyd4/aria2-ariang-x-d
   * AriaNg 界面不能显示？请记住目前在访问 AriaNg 界面的时候，地址最后一定要添加 `/`
   * Nextcloud 不能访问？页面显示`502`？， 由于 Nextcloud 启动耗时较长，大致为`3`分钟左右，请耐心等待。如果3分钟之后依然不能显示，请查看`nextcloud`的 Docker 容器是否有错误日志输出，如果没有，再稍等多等一下即可。
 
-## One more things
+## One more thing
     Plex!!!
 
 Plex 是一个视频服务器，有了Plex 之后，你通过本程序可以实现：
