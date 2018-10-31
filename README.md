@@ -163,6 +163,7 @@ nextcloud|![nextcloud](https://raw.githubusercontent.com/wahyd4/aria2-ariang-x-d
 ## One more thing
     Plex!!!
 
+![Plex Media server](https://raw.githubusercontent.com/wahyd4/aria2-ariang-x-docker-compose/master/images/plex.jpg)
 Plex 是一个视频服务器，有了Plex 之后，你通过本程序可以实现：
 
 `下载视频` -> `文件管理` ->  `视频播放` -> `分享 / 远程投屏` 集一体的解决方案。
