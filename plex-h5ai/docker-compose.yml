@@ -1,0 +1,49 @@
+version: "3"
+
+services:
+  h5ai:
+    image: bixidock/h5ai
+    volumes:
+      - ./data:/var/www:rw
+    restart: unless-stopped
+  aria2:
+    image: wahyd4/aria2-ui:h5ai
+    ports:
+      - "8000:80"
+      - "443:443"
+      - "6800:6800"
+    volumes:
+      - ./data:/var/www:rw
+    # volumes:
+    #   - /some_folder:/root/conf/key
+    #   - ~/test/aria2.conf:/root/conf/aria2.conf
+    environment:
+      - DOMAIN=:80
+      # - SSL=true
+      # - RPC_SECRET=Hello
+      # - ARIA2_USER=admin
+      # - ARIA2_PWD=password
+      # - ENABLE_AUTH=true
+    links:
+      - h5ai:file-manager
+    restart: unless-stopped
+  plex:
+    image: spritsail/plex-media-server
+    volumes:
+      - ./data:/media:rw # The media folder
+      - ./transcode:/transcode # Transcoder temporary directory
+      - ./config:/config # Configurations
+    environment:
+      - PLEX_CLAIM=your_token
+    restart: unless-stopped
+    hostname: "junv-plex-server" # change to the name you like
+    ports:
+      - "32400:32400" # The web port
+      - "3005:3005" # The following are optional
+      - "8324:8324"
+      - "32469:32469"
+      - "1900:1900"
+      - "32410:32410"
+      - "32412:32412"
+      - "32413:32413"
+      - "32414:32414"

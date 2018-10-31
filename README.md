@@ -13,7 +13,9 @@
   - [高级特性](#高级特性)
   - [找到你下载的文件](#找到你下载的文件)
   - [只想运行一个镜像？(如：在群晖中运行)](#只想运行一个镜像如在群晖中运行)
-  - [常见问题 FAQ](#常见问题)
+  - [常见问题 FAQ](#常见问题-faq)
+  - [One more things](#one-more-things)
+    - [快速运行](#快速运行)
   - [感谢](#感谢)
 
 <!-- /TOC -->
@@ -157,6 +159,32 @@ nextcloud|![nextcloud](https://raw.githubusercontent.com/wahyd4/aria2-ariang-x-d
   * 没有权限管理下载的文件？ 请考虑使用 `root` 用户运行 docker 程序。延伸阅读： <https://askubuntu.com/questions/477551/how-can-i-use-docker-without-sudo>
   * AriaNg 界面不能显示？请记住目前在访问 AriaNg 界面的时候，地址最后一定要添加 `/`
   * Nextcloud 不能访问？页面显示`502`？， 由于 Nextcloud 启动耗时较长，大致为`3`分钟左右，请耐心等待。如果3分钟之后依然不能显示，请查看`nextcloud`的 Docker 容器是否有错误日志输出，如果没有，再稍等多等一下即可。
+
+## One more things
+    Plex!!!
+
+Plex 是一个视频服务器，有了Plex 之后，你通过本程序可以实现：
+
+`下载视频` -> `文件管理` ->  `视频播放` -> `分享 / 远程投屏` 集一体的解决方案。
+分别对应的组件为:
+
+`aria2` -> `h5ai` -> `h5ai/plex` -> `plex app / DLNA / Chrome cast / Apple airdrop` 等等。
+
+### 快速运行
+
+1. 在你希望的运行电脑或者服务器上 git clone 本仓库
+2.  前往 <https://www.plex.tv/claim/> 获取 TOKEN， 并填充至 `plex-h5ai` 目录下的 `docker-compose.yml`下的 `PLEX_CLAIM`字段。
+3. 在命令行中运行
+```bash
+cd plex-h5ai
+docker-compose up -d
+```
+4. 在浏览器中打开 <http://loclahost:32400>，使用 Plex 平台账号登录即可像你在其他地方使用Plex一样享受播放、投屏的快乐了。
+
+更多Plex 的使用，请前往： <https://www.plex.tv/zh/>
+
+TODO: 稍后加入更多详细的文档，有疑问的可以提issue。
+
 ## 感谢
 
   * 创建 docker-compose 这个想法灵感源自于阅读了这帖子 <https://www.v2ex.com/t/383801>
