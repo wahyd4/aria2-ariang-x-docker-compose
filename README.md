@@ -5,18 +5,18 @@
 <!-- TOC -->
 
 - [Aria2-AriaNg-X docker-compose](#aria2-ariang-x-docker-compose)
-  - [应用截图](#应用截图)
-  - [为什么会有这个东西](#为什么会有这个东西)
-  - [比较 Filerun， h5ai 和 Nextcloud](#比较-filerun-h5ai-和-nextcloud)
-  - [安装与使用](#安装与使用)
-  - [升级](#升级)
-  - [高级特性](#高级特性)
-  - [找到你下载的文件](#找到你下载的文件)
-  - [只想运行一个镜像？(如：在群晖中运行)](#只想运行一个镜像如在群晖中运行)
-  - [常见问题 FAQ](#常见问题-faq)
+  - [应用截图](#%E5%BA%94%E7%94%A8%E6%88%AA%E5%9B%BE)
+  - [为什么会有这个东西](#%E4%B8%BA%E4%BB%80%E4%B9%88%E4%BC%9A%E6%9C%89%E8%BF%99%E4%B8%AA%E4%B8%9C%E8%A5%BF)
+  - [比较 Filerun， h5ai 和 Nextcloud](#%E6%AF%94%E8%BE%83-filerun-h5ai-%E5%92%8C-nextcloud)
+  - [安装与使用](#%E5%AE%89%E8%A3%85%E4%B8%8E%E4%BD%BF%E7%94%A8)
+  - [升级](#%E5%8D%87%E7%BA%A7)
+  - [高级特性](#%E9%AB%98%E7%BA%A7%E7%89%B9%E6%80%A7)
+  - [找到你下载的文件](#%E6%89%BE%E5%88%B0%E4%BD%A0%E4%B8%8B%E8%BD%BD%E7%9A%84%E6%96%87%E4%BB%B6)
+  - [什么一个Docker镜像包含所有功能？Yes!!!(如：在群晖中运行)](#%E4%BB%80%E4%B9%88%E4%B8%80%E4%B8%AAdocker%E9%95%9C%E5%83%8F%E5%8C%85%E5%90%AB%E6%89%80%E6%9C%89%E5%8A%9F%E8%83%BDyes%E5%A6%82%E5%9C%A8%E7%BE%A4%E6%99%96%E4%B8%AD%E8%BF%90%E8%A1%8C)
+  - [常见问题 FAQ](#%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98-faq)
   - [One more thing](#one-more-thing)
-    - [快速运行](#快速运行)
-  - [感谢](#感谢)
+    - [快速运行](#%E5%BF%AB%E9%80%9F%E8%BF%90%E8%A1%8C)
+  - [感谢](#%E6%84%9F%E8%B0%A2)
 
 <!-- /TOC -->
 
@@ -144,7 +144,7 @@ nextcloud|![nextcloud](https://raw.githubusercontent.com/wahyd4/aria2-ariang-x-d
 
   这里的 docker-compose 文件，将本地的`./data` 目录作为了 docker volume 来存储下载的各类文件，因此你可以在 `docker-compose` 文件所在目录`data` 子目录目录找到所有文件。你也可以根据自己的需要修改目录设置
 
-## 只想运行一个镜像？(如：在群晖中运行)
+## 什么一个Docker镜像包含所有功能？Yes!!!(如：在群晖中运行)
   ```bash
     docker run -d -p 8000:80 -p 6800:6800 -v ~/data:/data -v ~/aria2.conf:/root/conf/aria2.conf wahyd4/aria2-ui
   ```
@@ -152,7 +152,7 @@ nextcloud|![nextcloud](https://raw.githubusercontent.com/wahyd4/aria2-ariang-x-d
   * Aria2: <http://localhost:8000>
   * FileManger: <http://localhost:8000/files>
 
-  关于该镜像的更多使用介绍，请参考：<https://github.com/wahyd4/aria2-ariang-docker>
+  **推荐** ：使用该Docker镜像，一个镜像集成BT下载、文件管理、在线播放等功能。关于该镜像的更多使用介绍，请参考：<https://github.com/wahyd4/aria2-ariang-docker>
 
 ## 常见问题 FAQ
 
