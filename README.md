@@ -182,8 +182,3 @@ docker-compose up -d
 4. 在浏览器中打开 <http://loclahost:32400>，使用 Plex 平台账号登录即可像你在其他地方使用Plex一样享受播放、投屏的快乐了。
 
 更多Plex 的使用，请前往： <https://www.plex.tv/zh/>
-
-TODO: 稍后加入更多详细的文档，有疑问的可以提issue。
-
-
-
