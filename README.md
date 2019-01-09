@@ -16,7 +16,6 @@
   - [常见问题 FAQ](#%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98-faq)
   - [One more thing](#one-more-thing)
     - [快速运行](#%E5%BF%AB%E9%80%9F%E8%BF%90%E8%A1%8C)
-  - [感谢](#%E6%84%9F%E8%B0%A2)
 
 <!-- /TOC -->
 
@@ -185,11 +184,6 @@ docker-compose up -d
 更多Plex 的使用，请前往： <https://www.plex.tv/zh/>
 
 TODO: 稍后加入更多详细的文档，有疑问的可以提issue。
-
-## 感谢
-
-  * 创建 docker-compose 这个想法灵感源自于阅读了这帖子 <https://www.v2ex.com/t/383801>
-  * Aria2 Docker 镜像部分脚本来自 <https://doub.io/wlzy-30/>
 
 
 
