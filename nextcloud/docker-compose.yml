@@ -2,9 +2,9 @@ version: '2'
 
 services:
   nextcloud:
-    image: wonderfall/nextcloud
+    image: nextcloud:latest
     volumes:
-      - ./data/nextcloud:/data:rw
+      - ./data/nextcloud:/var/www/html:rw
       - ./data:/user-files:rw
     restart: always
   aria2:
