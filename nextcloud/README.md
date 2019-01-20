@@ -6,6 +6,7 @@
       - /data:/user-files
       - /abc:/abc
   ```
+  * 在宿主机上执行命令 `sudo chown -R www-data <abc>` #<>这里是你需要修改的目录, 让Nextcloud 有权限读写、管理文件
   * 打开 <http://ip:8000> `使用你喜欢的任意密码进行登录`
   * 点击右上角 设置 -> 应用
   * 启用 External storage support 插件, 并输入密码确认
