@@ -16,6 +16,7 @@
   - [常见问题 FAQ](#%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98-faq)
   - [One more thing](#one-more-thing)
     - [快速运行](#%E5%BF%AB%E9%80%9F%E8%BF%90%E8%A1%8C)
+  - [微信打赏](#%E5%BE%AE%E4%BF%A1%E6%89%93%E8%B5%8F)
 
 <!-- /TOC -->
 
@@ -183,3 +184,9 @@ docker-compose up -d
 4. 在浏览器中打开 <http://loclahost:32400>，使用 Plex 平台账号登录即可像你在其他地方使用Plex一样享受播放、投屏的快乐了。
 
 更多Plex 的使用，请前往： <https://www.plex.tv/zh/>
+
+## 微信打赏
+
+如果你喜欢，特别欢迎打赏，给我点动力，持续更新😃🍻🚀。
+
+![打赏](https://github.com/wahyd4/work-in-australia/raw/master/wepay.jpg)
