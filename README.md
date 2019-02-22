@@ -158,8 +158,9 @@ nextcloud|![nextcloud](https://raw.githubusercontent.com/wahyd4/aria2-ariang-x-d
   * Nextcloud没有权限管理下载的文件？ 不要忘记在主机上运行`chown -R www-data <文件夹>`,该文件夹即为你设置的docker-compose nextcloud service 下面设置的位于`宿主机(不是dokcer 容器里面的)`的共享文件夹。
   * AriaNg 界面不能显示？请记住目前在访问 AriaNg 界面的时候，地址最后一定要添加 `/`
   * Nextcloud 不能访问？页面显示`502`？， 由于 Nextcloud 启动耗时较长，大致为`3`分钟左右，请耐心等待。如果3分钟之后依然不能显示，请查看`nextcloud`的 Docker 容器是否有错误日志输出，如果没有，再稍等多等一下即可。
-
+  * 不支持ARM CPU 平台？ 目前暂没有让docker-compose 项目支持 ARM 的计划，但是推荐你试试这个单镜像版本 [`wahyd4/aria2-ui:arm64`](https://github.com/wahyd4/aria2-ariang-docker)
 ## One more thing
+
     Plex!!!
 
 ![Plex Media server](https://raw.githubusercontent.com/wahyd4/aria2-ariang-x-docker-compose/master/images/plex.jpg)

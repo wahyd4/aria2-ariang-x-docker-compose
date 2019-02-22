@@ -9,13 +9,10 @@
   - [Why this repository](#why-this-repository)
   - [Comparing among Filerun, h5ai and Nextcloud](#comparing-among-filerun-h5ai-and-nextcloud)
   - [How to run](#how-to-run)
-      - [Using **h5ai** as the file managment application.](#using-h5ai-as-the-file-managment-application)
-      - [Using **Filerun** as the file managment application.](#using-filerun-as-the-file-managment-application)
-      - [Using **Nextcloud** as the file managment application](#using-nextcloud-as-the-file-managment-application)
   - [Upgrade](#upgrade)
   - [Advanced features](#advanced-features)
   - [Get your downloaded files](#get-your-downloaded-files)
-  - [Questions](#questions)
+  - [FAQ](#faq)
   - [Just want to a standalone image?(e.g. Running in Synology NAS)](#just-want-to-a-standalone-imageeg-running-in-synology-nas)
 
 <!-- /TOC -->
@@ -125,9 +122,10 @@ nextcloud|![nextcloud](https://raw.githubusercontent.com/wahyd4/aria2-ariang-x-d
 ## Get your downloaded files
   In docker-compose, we used `/data` as the docker volumn folder to storage all kinds of files. So you can find your files in `/data`
 
-## Questions
+## FAQ
 
   * Have no rights to manage the files you downloaded? Considering using `root` user to run docker program. Please refer: <https://askubuntu.com/questions/477551/how-can-i-use-docker-without-sudo>
+  * Doesn't support ARM CPUs? Currently there is no plan shortly to release a docker-compose version to support ARM, but recommend you try [`wahyd4/aria2-ui:arm64`](https://github.com/wahyd4/aria2-ariang-docker)
 ## Just want to a standalone image?(e.g. Running in Synology NAS)
   ```bash
     docker run --rm  -p 8000:80  -p 6800:6800 -v ~/data/:/data wahyd4/aria2-ui
