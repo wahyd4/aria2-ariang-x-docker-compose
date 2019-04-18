@@ -1,19 +1,14 @@
 version: "3"
 
 services:
-  h5ai:
-    image: bixidock/h5ai
-    volumes:
-      - ./data:/var/www:rw
-    restart: unless-stopped
-  aria2:
-    image: wahyd4/aria2-ui:h5ai
+  filebrowser:
+    image: wahyd4/aria2-ui:latest
     ports:
       - "8000:80"
       - "443:443"
       - "6800:6800"
     volumes:
-      - ./data:/var/www:rw
+      - ./data:/data
     # volumes:
     #   - /some_folder:/root/conf/key
     #   - ~/test/aria2.conf:/root/conf/aria2.conf
@@ -24,8 +19,6 @@ services:
       # - ARIA2_USER=admin
       # - ARIA2_PWD=password
       # - ENABLE_AUTH=true
-    links:
-      - h5ai:file-manager
     restart: unless-stopped
   plex:
     image: spritsail/plex-media-server
@@ -39,7 +32,7 @@ services:
     hostname: "junv-plex-server" # change the name to whatever you like
     ports:
       - "32400:32400" # The web port
-      - "3005:3005" # The following are optional
+      - "3005:3005" # The following ports are optional
       - "8324:8324"
       - "32469:32469"
       - "1900:1900"

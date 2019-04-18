@@ -2,23 +2,19 @@
 
 中文 | [English](https://github.com/wahyd4/aria2-ariang-x-docker-compose/blob/master/README.en.md)
 
-<!-- TOC -->
-
 - [Aria2-AriaNg-X docker-compose](#aria2-ariang-x-docker-compose)
-  - [应用截图](#%E5%BA%94%E7%94%A8%E6%88%AA%E5%9B%BE)
-  - [为什么会有这个东西](#%E4%B8%BA%E4%BB%80%E4%B9%88%E4%BC%9A%E6%9C%89%E8%BF%99%E4%B8%AA%E4%B8%9C%E8%A5%BF)
-  - [比较 Filerun， h5ai 和 Nextcloud](#%E6%AF%94%E8%BE%83-filerun-h5ai-%E5%92%8C-nextcloud)
-  - [安装与使用](#%E5%AE%89%E8%A3%85%E4%B8%8E%E4%BD%BF%E7%94%A8)
-  - [升级](#%E5%8D%87%E7%BA%A7)
-  - [高级特性](#%E9%AB%98%E7%BA%A7%E7%89%B9%E6%80%A7)
-  - [找到你下载的文件](#%E6%89%BE%E5%88%B0%E4%BD%A0%E4%B8%8B%E8%BD%BD%E7%9A%84%E6%96%87%E4%BB%B6)
-  - [什么？一个Docker镜像包含所有功能？Yes!!!(如：在群晖中运行)](#%E4%BB%80%E4%B9%88%E4%B8%80%E4%B8%AAdocker%E9%95%9C%E5%83%8F%E5%8C%85%E5%90%AB%E6%89%80%E6%9C%89%E5%8A%9F%E8%83%BDyes%E5%A6%82%E5%9C%A8%E7%BE%A4%E6%99%96%E4%B8%AD%E8%BF%90%E8%A1%8C)
-  - [常见问题 FAQ](#%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98-faq)
-  - [One more thing](#one-more-thing)
-    - [快速运行](#%E5%BF%AB%E9%80%9F%E8%BF%90%E8%A1%8C)
-  - [微信打赏](#%E5%BE%AE%E4%BF%A1%E6%89%93%E8%B5%8F)
-
-<!-- /TOC -->
+  - [应用截图](#应用截图)
+  - [为什么会有这个东西](#为什么会有这个东西)
+  - [比较 Filerun， h5ai 和 Nextcloud](#比较-filerun-h5ai-和-nextcloud)
+  - [安装与使用](#安装与使用)
+  - [升级](#升级)
+  - [高级特性](#高级特性)
+  - [找到你下载的文件](#找到你下载的文件)
+  - [什么？一个Docker镜像包含所有功能？Yes!!!(如：在群晖中运行)](#什么一个docker镜像包含所有功能yes如在群晖中运行)
+  - [常见问题 FAQ](#常见问题-faq)
+  - [Plex](#plex)
+    - [快速运行](#快速运行)
+  - [微信打赏](#微信打赏)
 
 这个项目是提供一个 docker-compose文件，让你可以一步就拥有一个集图形化界面的 Aria2下载（[AriaNg](https://github.com/mayswind/AriaNg)）和在线预览和管理文件的平台：
   * [FileRun](https://www.filerun.com/)
@@ -27,12 +23,12 @@
 
 
 ## 应用截图
-名称|截图
-:----:|:---:
-AriaNg|![AriaNg](https://raw.githubusercontent.com/wahyd4/aria2-ariang-x-docker-compose/master/images/ariang.png)
-Filerun|![filerun](https://raw.githubusercontent.com/wahyd4/aria2-ariang-x-docker-compose/master/images/filerun.png)
-h5ai|![h5ai](https://raw.githubusercontent.com/wahyd4/aria2-ariang-x-docker-compose/master/images/h5ai.png)
-nextcloud|![nextcloud](https://raw.githubusercontent.com/wahyd4/aria2-ariang-x-docker-compose/master/images/nextcloud.png)
+|   名称    |                                                       截图                                                       |
+| :-------: | :--------------------------------------------------------------------------------------------------------------: |
+|  AriaNg   |    ![AriaNg](https://raw.githubusercontent.com/wahyd4/aria2-ariang-x-docker-compose/master/images/ariang.png)    |
+|  Filerun  |   ![filerun](https://raw.githubusercontent.com/wahyd4/aria2-ariang-x-docker-compose/master/images/filerun.png)   |
+|   h5ai    |      ![h5ai](https://raw.githubusercontent.com/wahyd4/aria2-ariang-x-docker-compose/master/images/h5ai.png)      |
+| nextcloud | ![nextcloud](https://raw.githubusercontent.com/wahyd4/aria2-ariang-x-docker-compose/master/images/nextcloud.png) |
 
 ## 为什么会有这个东西
   * 使用 Docker-compose 让每个 docker 镜像只做一件事，则其本身会更加稳定，不易受其他组件的影响，也更方便管理
@@ -41,17 +37,17 @@ nextcloud|![nextcloud](https://raw.githubusercontent.com/wahyd4/aria2-ariang-x-d
 
 ## 比较 Filerun， h5ai 和 Nextcloud
 
-|比较类别 | Filerun | Nextcloud | h5ai|
-|---- | --- | --- | --- |
-|Docker 镜像大小| 200M | 500M | 20M |
-|功能| 功能少 | 功能强大 | 功能少 |
-|UI| 简洁 | 精美 | 简洁 |
-|依赖| 必须要Mysql数据库 | 可以直接使用 内嵌SQLlite，也可以使用其他外置数据库 | 无数据库 |
-|集成难度|全自动，无需人工操作|需要人工操作两步| 全自动 |
-|客户端|无|有移动和桌面客户端| 无|
-|登录安全|支持用户名密码登录|支持用户名密码登录| 无|
-|容器数量|mysql, filerun, aria2|nextcloud, aria2| h5ai, aria2 |
-|总结|轻量级|功能全面，本身可以作为一个很好的云盘使用| 仅提供文件列表，和查看文件，播放音视频文件功能 |
+| 比较类别        | Filerun               | Nextcloud                                          | h5ai                                           |
+| --------------- | --------------------- | -------------------------------------------------- | ---------------------------------------------- |
+| Docker 镜像大小 | 200M                  | 500M                                               | 20M                                            |
+| 功能            | 功能少                | 功能强大                                           | 功能少                                         |
+| UI              | 简洁                  | 精美                                               | 简洁                                           |
+| 依赖            | 必须要Mysql数据库     | 可以直接使用 内嵌SQLlite，也可以使用其他外置数据库 | 无数据库                                       |
+| 集成难度        | 全自动，无需人工操作  | 需要人工操作两步                                   | 全自动                                         |
+| 客户端          | 无                    | 有移动和桌面客户端                                 | 无                                             |
+| 登录安全        | 支持用户名密码登录    | 支持用户名密码登录                                 | 无                                             |
+| 容器数量        | mysql, filerun, aria2 | nextcloud, aria2                                   | h5ai, aria2                                    |
+| 总结            | 轻量级                | 功能全面，本身可以作为一个很好的云盘使用           | 仅提供文件列表，和查看文件，播放音视频文件功能 |
 
 
 ## 安装与使用
@@ -160,9 +156,7 @@ nextcloud|![nextcloud](https://raw.githubusercontent.com/wahyd4/aria2-ariang-x-d
   * AriaNg 界面不能显示？请记住目前在访问 AriaNg 界面的时候，地址最后一定要添加 `/`
   * Nextcloud 不能访问？页面显示`502`？， 由于 Nextcloud 启动耗时较长，大致为`3`分钟左右，请耐心等待。如果3分钟之后依然不能显示，请查看`nextcloud`的 Docker 容器是否有错误日志输出，如果没有，再稍等多等一下即可。
   * 不支持ARM CPU 平台？ 目前暂没有让docker-compose 项目支持 ARM 的计划，但是推荐你试试这个单镜像版本 [`wahyd4/aria2-ui:arm64`](https://github.com/wahyd4/aria2-ariang-docker)
-## One more thing
-
-    Plex!!!
+## Plex
 
 ![Plex Media server](https://raw.githubusercontent.com/wahyd4/aria2-ariang-x-docker-compose/master/images/plex.jpg)
 Plex 是一个视频服务器，有了Plex 之后，你通过本程序可以实现：
@@ -170,18 +164,20 @@ Plex 是一个视频服务器，有了Plex 之后，你通过本程序可以实�
 `下载视频` -> `文件管理` ->  `视频播放` -> `分享 / 远程投屏` 集一体的解决方案。
 分别对应的组件为:
 
-`aria2` -> `h5ai` -> `h5ai/plex` -> `plex app / DLNA / Chrome cast / Apple airdrop` 等等。
+`aria2` -> `File Browser` -> `Plex/ File Browser` -> `Plex app / DLNA / Chromecast / Apple airplay` 等等。
 
 ### 快速运行
 
 1. 在你希望的运行电脑或者服务器上 git clone 本仓库
-2.  前往 <https://www.plex.tv/claim/> 获取 TOKEN， 并填充至 `plex-h5ai` 目录下的 `docker-compose.yml`下的 `PLEX_CLAIM`字段。
+2.  前往 <https://www.plex.tv/claim/> 获取 TOKEN， 并填充至 `plex-filebrowser` 目录下的 `docker-compose.yml`下的 `PLEX_CLAIM`字段。
 3. 在命令行中运行
 ```bash
-cd plex-h5ai
+cd plex-filebrowser
 docker-compose up -d
 ```
 4. 在浏览器中打开 <http://loclahost:32400>，使用 Plex 平台账号登录即可像你在其他地方使用Plex一样享受播放、投屏的快乐了。
+
+如果你更喜欢`h5ai`,没关系。 你也可以直接去到该目录下，输入`Plex token` 后，执行`docker-compose up -d` 即可。
 
 更多Plex 的使用，请前往： <https://www.plex.tv/zh/>
 
