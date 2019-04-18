@@ -177,6 +177,10 @@ docker-compose up -d
 ```
 4. 在浏览器中打开 <http://loclahost:32400>，使用 Plex 平台账号登录即可像你在其他地方使用Plex一样享受播放、投屏的快乐了。
 
+
+* File Browser: <http://localhost:8000>
+* AriaNG: <http://localhost:8000/ui/>
+
 如果你更喜欢`h5ai`,没关系。 你也可以直接去到该目录下，输入`Plex token` 后，执行`docker-compose up -d` 即可。
 
 更多Plex 的使用，请前往： <https://www.plex.tv/zh/>
