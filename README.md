@@ -67,7 +67,7 @@
 
   1. 查看文件h5ai： <http://localhost:8000>
 
-  2. AriaNg： <http://localhost:8000/aria2/> 注意地址后面一定要带`/` 哦，后面两种方案的也是一样
+  2. AriaNg： <http://localhost:8000/aria2/> **注意地址后面一定要带`/` 哦**，后面两种方案的也是一样
   ####  使用 **Filerun** 作为在线文件管理器
   ```bash
     git clone https://github.com/wahyd4/aria2-ariang-x-docker-compose.git
@@ -183,7 +183,6 @@ docker-compose up -d
 * File Browser: <http://localhost:8000>
 * AriaNG: <http://localhost:8000/ui/>
 
-如果你更喜欢`h5ai`,没关系。 你也可以直接去到该目录下，输入`Plex token` 后，执行`docker-compose up -d` 即可。
 
 更多Plex 的使用，请前往： <https://www.plex.tv/zh/>
 
