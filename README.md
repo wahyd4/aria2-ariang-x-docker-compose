@@ -1,5 +1,9 @@
 # Aria2-AriaNg-X docker-compose
 
+## Stargazers over time
+
+[![Stargazers over time](https://starchart.cc/wahyd4/aria2-ariang-x-docker-compose.svg)](https://starchart.cc/wahyd4/aria2-ariang-x-docker-compose)
+
 中文 | [English](https://github.com/wahyd4/aria2-ariang-x-docker-compose/blob/master/README.en.md)
 
 - [Aria2-AriaNg-X docker-compose](#aria2-ariang-x-docker-compose)
