@@ -68,7 +68,7 @@
 
   1. 查看文件h5ai： <http://localhost:8000>
 
-  2. AriaNg： <http://localhost:8000/aria2/> **注意地址后面一定要带`/` 哦**，后面两种方案的也是一样
+  2. AriaNg： <http://localhost:8000/aria2/> 
   ####  使用 **Filerun** 作为在线文件管理器
   ```bash
     git clone https://github.com/wahyd4/aria2-ariang-x-docker-compose.git
