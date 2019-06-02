@@ -68,7 +68,7 @@ nextcloud|![nextcloud](https://raw.githubusercontent.com/wahyd4/aria2-ariang-x-d
 
   1. h5ai： <http://localhost:8000>
 
-  2. AriaNg： <http://localhost:8000/aria2/> Don't forget the last `/`, the other two docker-composes also need `/`.
+  2. AriaNg： <http://localhost:8000/aria2/> 
   ####  Using **Filerun** as the file managment application.
   ```bash
     git clone https://github.com/wahyd4/aria2-ariang-x-docker-compose.git
@@ -130,9 +130,9 @@ nextcloud|![nextcloud](https://raw.githubusercontent.com/wahyd4/aria2-ariang-x-d
   ```bash
     docker run --rm  -p 8000:80  -p 6800:6800 -v ~/data/:/data wahyd4/aria2-ui
   ```
-  `8000` is the exposed port of AriaNg， `~/data/` is your files folder.
+  `8000` is the exposed port of AriaNg， `~/data/` is the data folder on your host machine(outside docker).
 
-  * Aria2: <http://localhost:8000>
-  * FileManger: <http://localhost:8000/files>
+  * FileBrowser: <http://localhost:8000>
+  * AriaNG: <http://localhost:8000/ui>
 
   More examples please refer: <https://github.com/wahyd4/aria2-ariang-docker>
