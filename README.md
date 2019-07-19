@@ -3,17 +3,21 @@
 
 中文 | [English](https://github.com/wahyd4/aria2-ariang-x-docker-compose/blob/master/README.en.md)
 
-- [Aria2-AriaNg-X docker-compose](#aria2-ariang-x-docker-compose)
+- [Aria2-AriaNg-X docker-compose](#Aria2-AriaNg-X-docker-compose)
   - [应用截图](#应用截图)
   - [为什么会有这个东西](#为什么会有这个东西)
-  - [比较 Filerun， h5ai 和 Nextcloud](#比较-filerun-h5ai-和-nextcloud)
+  - [比较 Filerun， h5ai 和 Nextcloud](#比较-Filerun-h5ai-和-Nextcloud)
   - [安装与使用](#安装与使用)
+    - [使用 Filebrowser 安装](#使用-Filebrowser-安装)
+    - [使用 **h5ai** 作为在线文件查看和播放](#使用-h5ai-作为在线文件查看和播放)
+    - [使用 **Filerun** 作为在线文件管理器](#使用-Filerun-作为在线文件管理器)
+    - [使用 **Nextcloud** 安装](#使用-Nextcloud-安装)
   - [升级](#升级)
   - [高级特性](#高级特性)
   - [找到你下载的文件](#找到你下载的文件)
-  - [什么？一个Docker镜像包含所有功能？Yes!!!(如：在群晖中运行)](#什么一个docker镜像包含所有功能yes如在群晖中运行)
-  - [常见问题 FAQ](#常见问题-faq)
-  - [Plex](#plex)
+  - [什么？一个Docker镜像包含所有功能？Yes!!!(如：在群晖中运行)](#什么一个Docker镜像包含所有功能Yes如在群晖中运行)
+  - [常见问题 FAQ](#常见问题-FAQ)
+  - [Plex](#Plex)
     - [快速运行](#快速运行)
   - [微信打赏](#微信打赏)
 
@@ -21,6 +25,7 @@
   * [FileRun](https://www.filerun.com/)
   * [Nextcloud](https://nextcloud.com/)
   * [h5ai](https://larsjung.de/h5ai/)
+  * [Filebrowser](https://filebrowser.xyz/)
 
 
 ## 应用截图
@@ -30,6 +35,7 @@
 |  Filerun  |   ![filerun](https://raw.githubusercontent.com/wahyd4/aria2-ariang-x-docker-compose/master/images/filerun.png)   |
 |   h5ai    |      ![h5ai](https://raw.githubusercontent.com/wahyd4/aria2-ariang-x-docker-compose/master/images/h5ai.png)      |
 | nextcloud | ![nextcloud](https://raw.githubusercontent.com/wahyd4/aria2-ariang-x-docker-compose/master/images/nextcloud.png) |
+| Filebrowser| ![filebrowser](https://github.com/wahyd4/aria2-ariang-docker/raw/master/filemanager.png) |
 
 ## 为什么会有这个东西
   * 使用 Docker-compose 让每个 docker 镜像只做一件事，则其本身会更加稳定，不易受其他组件的影响，也更方便管理
@@ -38,17 +44,17 @@
 
 ## 比较 Filerun， h5ai 和 Nextcloud
 
-| 比较类别        | Filerun               | Nextcloud                                          | h5ai                                           |
-| --------------- | --------------------- | -------------------------------------------------- | ---------------------------------------------- |
-| Docker 镜像大小 | 200M                  | 500M                                               | 20M                                            |
-| 功能            | 功能少                | 功能强大                                           | 功能少                                         |
-| UI              | 简洁                  | 精美                                               | 简洁                                           |
-| 依赖            | 必须要Mysql数据库     | 可以直接使用 内嵌SQLlite，也可以使用其他外置数据库 | 无数据库                                       |
-| 集成难度        | 全自动，无需人工操作  | 需要人工操作两步                                   | 全自动                                         |
-| 客户端          | 无                    | 有移动和桌面客户端                                 | 无                                             |
-| 登录安全        | 支持用户名密码登录    | 支持用户名密码登录                                 | 无                                             |
-| 容器数量        | mysql, filerun, aria2 | nextcloud, aria2                                   | h5ai, aria2                                    |
-| 总结            | 轻量级                | 功能全面，本身可以作为一个很好的云盘使用           | 仅提供文件列表，和查看文件，播放音视频文件功能 |
+| 比较类别        | Filerun               | Nextcloud                    | h5ai                | Filebrowser   |
+| --------------- | --------------------- | --------------------------- | ----------------------- | -------------|
+| Docker 镜像大小 | 200M                  | 500M                 | 20M      | 40M |
+| 功能            | 功能少                | 功能强大                      | 功能少            | 功能足够
+| UI              | 简洁                  | 精美                         | 简洁            | 简洁 |
+| 依赖            | 必须要Mysql数据库     | 可以直接使用 内嵌SQLlite，也可以使用其他外置数据库 | 无数据库        | 内嵌数据库|
+| 集成难度        | 全自动，无需人工操作  | 需要人工操作两步                                   | 全自动     | 全自动 |
+| 客户端          | 无                    | 有移动和桌面客户端            | 无       | 无|
+| 登录安全        | 支持用户名密码登录    | 支持用户名密码登录             | 无              | 用户名密码登录 |
+| 容器数量        | mysql, filerun, aria2 | nextcloud, aria2        | h5ai, aria2         | 只需一个
+| 总结            | 轻量级          | 功能全面，本身可以作为一个很好的云盘使用     | 仅提供文件列表，和查看文件，播放音视频文件功能 | 一个容器集成所有功能|
 
 
 ## 安装与使用
@@ -58,7 +64,24 @@
   1. 安装 Docker CE (社区版)，不要使用 Ubuntu 等操作系统系统自带的安装包来安装，因为他们的版本都很老了。推荐使用[官方提供](https://docs.docker.com/engine/installation/linux/docker-ce/ubuntu/)的方式安装
 
   2. 安装 Docker Compose <https://docs.docker.com/compose/install/#install-compose>
-  #### 使用 **h5ai** 作为在线文件查看和播放
+
+### 使用 Filebrowser 安装
+  如果你希望指定`UID`和`GID`，还希望可以使用`Plex` 来管理下载的电影等资源，强烈推荐使用Filebrowser。
+
+  ```bash
+    git clone https://github.com/wahyd4/aria2-ariang-x-docker-compose.git
+    cd aria2-ariang-x-docker-compose/plex-filebrowser
+    docker-compose up -d
+  ```
+  搞定！
+
+  1. Filebrowser <http://localhost>
+  2. AriaNg： <http://localhost/ui>
+  3. Plex: <http://localhost:32400>
+
+> **注意**: 如果你使用非`80`端口，则需要进入AriaNg，修改RPC 地址端口为你暴露出的端口。因为该镜像Filebrowser 和Aria2c 共享一个端口。
+
+### 使用 **h5ai** 作为在线文件查看和播放
   ```bash
     git clone https://github.com/wahyd4/aria2-ariang-x-docker-compose.git
     cd aria2-ariang-x-docker-compose/h5ai
@@ -68,8 +91,8 @@
 
   1. 查看文件h5ai： <http://localhost:8000>
 
-  2. AriaNg： <http://localhost:8000/aria2/> 
-  ####  使用 **Filerun** 作为在线文件管理器
+  2. AriaNg： <http://localhost:8000/aria2/>
+### 使用 **Filerun** 作为在线文件管理器
   ```bash
     git clone https://github.com/wahyd4/aria2-ariang-x-docker-compose.git
     cd aria2-ariang-x-docker-compose/filerun
@@ -81,7 +104,7 @@
 
   2. AriaNg： <http://localhost:8000/aria2/>
 
-  #### 使用 **Nextcloud** 安装
+### 使用 **Nextcloud** 安装
   ```bash
     git clone https://github.com/wahyd4/aria2-ariang-x-docker-compose.git
     cd aria2-ariang-x-docker-compose/nextcloud
@@ -94,6 +117,7 @@
   Nextcloud 还需额外的一点手动操作，[链接配置外部存储](https://github.com/wahyd4/aria2-ariang-x-docker-compose/tree/master/nextcloud#nextcloud-配置-external-storage)
 
   > **注意**: 由于 Nextcloud 镜像启动较慢，平均需要3分钟左右，在启动之前访问会得到`502`错误，请耐心等待一下
+
 
 ## 升级
   进入 filerun, h5ai 或者 nextcloud 目录
@@ -111,7 +135,7 @@
 
   ```yaml
   aria2:
-    image: wahyd4/aria2-ariang:filerun
+    image: wahyd4/aria2-ui:filerun
     links:
       - web:file-manager
     ports:

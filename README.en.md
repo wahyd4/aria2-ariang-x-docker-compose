@@ -4,16 +4,16 @@
 
 <!-- TOC -->
 
-- [Aria2-AriaNg-X docker-compose](#aria2-ariang-x-docker-compose)
-  - [Screenshots](#screenshots)
-  - [Why this repository](#why-this-repository)
-  - [Comparing among Filerun, h5ai and Nextcloud](#comparing-among-filerun-h5ai-and-nextcloud)
-  - [How to run](#how-to-run)
-  - [Upgrade](#upgrade)
-  - [Advanced features](#advanced-features)
-  - [Get your downloaded files](#get-your-downloaded-files)
-  - [FAQ](#faq)
-  - [Just want to a standalone image?(e.g. Running in Synology NAS)](#just-want-to-a-standalone-imageeg-running-in-synology-nas)
+- [Aria2-AriaNg-X docker-compose](#Aria2-AriaNg-X-docker-compose)
+  - [Screenshots](#Screenshots)
+  - [Why this repository](#Why-this-repository)
+  - [Comparing among Filerun, h5ai and Nextcloud](#Comparing-among-Filerun-h5ai-and-Nextcloud)
+  - [How to run](#How-to-run)
+  - [Upgrade](#Upgrade)
+  - [Advanced features](#Advanced-features)
+  - [Get your downloaded files](#Get-your-downloaded-files)
+  - [FAQ](#FAQ)
+  - [Just want to a standalone image?(e.g. Running in Synology NAS)](#Just-want-to-a-standalone-imageeg-Running-in-Synology-NAS)
 
 <!-- /TOC -->
 
@@ -68,7 +68,7 @@ nextcloud|![nextcloud](https://raw.githubusercontent.com/wahyd4/aria2-ariang-x-d
 
   1. h5ai： <http://localhost:8000>
 
-  2. AriaNg： <http://localhost:8000/aria2/> 
+  2. AriaNg： <http://localhost:8000/aria2/>
   ####  Using **Filerun** as the file managment application.
   ```bash
     git clone https://github.com/wahyd4/aria2-ariang-x-docker-compose.git
@@ -109,7 +109,7 @@ nextcloud|![nextcloud](https://raw.githubusercontent.com/wahyd4/aria2-ariang-x-d
 
   ```yaml
   aria2:
-    image: wahyd4/aria2-ariang:filerun
+    image: wahyd4/aria2-ui:filerun
     links:
       - web:file-manager
     ports:

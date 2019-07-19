@@ -4,16 +4,16 @@ services:
   filebrowser:
     image: wahyd4/aria2-ui:latest
     ports:
-      - "8000:80"
+      - "80:80"
       - "443:443"
-      - "6800:6800"
     volumes:
       - ./data:/data
-    # volumes:
     #   - /some_folder:/root/conf/key
     #   - ~/test/aria2.conf:/root/conf/aria2.conf
     environment:
-      - DOMAIN=:80
+      - PUID=1000
+      - PGID=1000
+      # - DOMAIN=https://subdomain.example.com
       # - SSL=true
       # - RPC_SECRET=Hello
       # - ARIA2_USER=admin
