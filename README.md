@@ -6,7 +6,7 @@
 - [Aria2-AriaNg-X docker-compose](#Aria2-AriaNg-X-docker-compose)
   - [应用截图](#应用截图)
   - [为什么会有这个东西](#为什么会有这个东西)
-  - [比较 Filerun， h5ai 和 Nextcloud](#比较-Filerun-h5ai-和-Nextcloud)
+  - [比较 FileBrowser, Filerun， h5ai 和 Nextcloud](#比较-FileBrowser-Filerun-h5ai-和-Nextcloud)
   - [安装与使用](#安装与使用)
     - [使用 Filebrowser 安装](#使用-Filebrowser-安装)
     - [使用 **h5ai** 作为在线文件查看和播放](#使用-h5ai-作为在线文件查看和播放)
@@ -42,7 +42,7 @@
   * AriaNg 着实比之前的 Aria2 之前的其他图形化界面程序漂亮了太多。让人很喜欢。
   * 在线查看，预览下载的文件，让我们自己在自己 vps 上就可以拥有某些在线服务商提供的离线下载（迅雷、115）这样的功能。而且所有的控制权都在你手里，不用担心被删除资源
 
-## 比较 Filerun， h5ai 和 Nextcloud
+## 比较 FileBrowser, Filerun， h5ai 和 Nextcloud
 
 | 比较类别        | Filerun               | Nextcloud                    | h5ai                | Filebrowser   |
 | --------------- | --------------------- | --------------------------- | ----------------------- | -------------|
