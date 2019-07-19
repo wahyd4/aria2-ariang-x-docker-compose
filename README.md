@@ -73,7 +73,7 @@
     cd aria2-ariang-x-docker-compose/plex-filebrowser
     docker-compose up -d
   ```
-  搞定！
+就这么简单！
 
   1. Filebrowser <http://localhost>
   2. AriaNg： <http://localhost/ui>
