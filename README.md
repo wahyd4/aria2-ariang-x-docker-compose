@@ -167,11 +167,11 @@
 
 ## 什么？一个Docker镜像包含所有功能？Yes!!!(如：在群晖中运行)
   ```bash
-    docker run -d -p 8000:80 -p 6800:6800 -v ~/data:/data -v ~/aria2.conf:/root/conf/aria2.conf wahyd4/aria2-ui
+    docker run -d --name aria2-ui -p 80:80 -v ~/data:/data wahyd4/aria2-ui
   ```
-  `8000` 本地则是你暴露出对外访问的 AriaNg 图形界面的端口， `~/data/` 是你所有通过 Aria2 下载的文件目录, `~/aria2.conf` 则是你自己的 aria2.conf 配置文件地址。
-  * Aria2: <http://localhost:8000>
-  * FileManger: <http://localhost:8000/files>
+  `80` 本地则是你暴露出对外访问的 AriaNg 图形界面的端口， `~/data/` 是你所有通过 Aria2 下载的文件目录
+  * Aria2: <http://localhost:80>
+  * FileManger: <http://localhost:80/files>
 
   **推荐** ：使用该Docker镜像，一个镜像集成BT下载、文件管理、在线播放等功能。关于该镜像的更多使用介绍，请参考：<https://github.com/wahyd4/aria2-ariang-docker>
 
