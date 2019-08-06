@@ -128,7 +128,7 @@ nextcloud|![nextcloud](https://raw.githubusercontent.com/wahyd4/aria2-ariang-x-d
   * Doesn't support ARM CPUs? Currently there is no plan shortly to release a docker-compose version to support ARM, but recommend you try [`wahyd4/aria2-ui:arm64`](https://github.com/wahyd4/aria2-ariang-docker)
 ## Just want to a standalone image?(e.g. Running in Synology NAS)
   ```bash
-    docker run --rm  -p 8000:80  -p 6800:6800 -v ~/data/:/data wahyd4/aria2-ui
+    docker run --rm  -p 80:80  -p 443:443 -v ~/data/:/data wahyd4/aria2-ui
   ```
   `8000` is the exposed port of AriaNg， `~/data/` is the data folder on your host machine(outside docker).
 
