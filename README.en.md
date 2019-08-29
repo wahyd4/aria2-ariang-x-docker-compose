@@ -26,7 +26,7 @@ This repository contains several docker-compose files to help you running a Aria
 Name|Screenshot
 :----: | :---:
  AriaNg|![AriaNg](https://raw.githubusercontent.com/wahyd4/aria2-ariang-x-docker-compose/master/images/ariang.png)
- Filerun|![filerun](https://raw.githubusercontent.com/wahyd4/aria2-ariang-x-docker-compose/master/images/filerun.png)
+ Filerun|![filerun](https://raw.githubusercontent.com/wahyd4/aria2-ariang-x-docker-compose/master/images/filerun.jpg)
  h5ai|![h5ai](https://raw.githubusercontent.com/wahyd4/aria2-ariang-x-docker-compose/master/images/h5ai.png)
 nextcloud|![nextcloud](https://raw.githubusercontent.com/wahyd4/aria2-ariang-x-docker-compose/master/images/nextcloud.png)
 
