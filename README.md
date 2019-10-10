@@ -3,23 +3,24 @@
 
 中文 | [English](https://github.com/wahyd4/aria2-ariang-x-docker-compose/blob/master/README.en.md)
 
-- [Aria2-AriaNg-X docker-compose](#Aria2-AriaNg-X-docker-compose)
+<img src="https://raw.githubusercontent.com/wahyd4/work-in-australia/766592ac6318027d7b3c334d8c50ca80818eeff8/wepay.jpg" alt="buy me a drink" width="120"/>
+
+- [Aria2-AriaNg-X docker-compose](#aria2-ariang-x-docker-compose)
   - [应用截图](#应用截图)
   - [为什么会有这个东西](#为什么会有这个东西)
-  - [比较 FileBrowser, Filerun， h5ai 和 Nextcloud](#比较-FileBrowser-Filerun-h5ai-和-Nextcloud)
+  - [比较 FileBrowser, Filerun， h5ai 和 Nextcloud](#比较-filebrowser-filerun-h5ai-和-nextcloud)
   - [安装与使用](#安装与使用)
-    - [使用 Filebrowser 安装](#使用-Filebrowser-安装)
+    - [使用 Filebrowser 安装](#使用-filebrowser-安装)
     - [使用 **h5ai** 作为在线文件查看和播放](#使用-h5ai-作为在线文件查看和播放)
-    - [使用 **Filerun** 作为在线文件管理器](#使用-Filerun-作为在线文件管理器)
-    - [使用 **Nextcloud** 安装](#使用-Nextcloud-安装)
+    - [使用 **Filerun** 作为在线文件管理器](#使用-filerun-作为在线文件管理器)
+    - [使用 **Nextcloud** 安装](#使用-nextcloud-安装)
   - [升级](#升级)
   - [高级特性](#高级特性)
   - [找到你下载的文件](#找到你下载的文件)
-  - [什么？一个Docker镜像包含所有功能？Yes!!!(如：在群晖中运行)](#什么一个Docker镜像包含所有功能Yes如在群晖中运行)
-  - [常见问题 FAQ](#常见问题-FAQ)
-  - [Plex](#Plex)
+  - [什么？一个Docker镜像包含所有功能？Yes!!!(如：在群晖中运行)](#什么一个docker镜像包含所有功能yes如在群晖中运行)
+  - [常见问题 FAQ](#常见问题-faq)
+  - [Plex](#plex)
     - [快速运行](#快速运行)
-  - [微信打赏](#微信打赏)
 
 这个项目是提供一个 docker-compose文件，让你可以一步就拥有一个集图形化界面的 Aria2下载（[AriaNg](https://github.com/mayswind/AriaNg)）和在线预览和管理文件的平台：
   * [FileRun](https://www.filerun.com/)
@@ -210,9 +211,3 @@ docker-compose up -d
 
 
 更多Plex 的使用，请前往： <https://www.plex.tv/zh/>
-
-## 微信打赏
-
-如果你喜欢，特别欢迎打赏，给我点动力，持续更新😃🍻🚀。
-
-![打赏](https://github.com/wahyd4/work-in-australia/raw/master/wepay.jpg)
