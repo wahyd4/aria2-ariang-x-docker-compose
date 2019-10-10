@@ -3,6 +3,8 @@
 
 中文 | [English](https://github.com/wahyd4/aria2-ariang-x-docker-compose/blob/master/README.en.md)
 
+<img src="https://raw.githubusercontent.com/wahyd4/work-in-australia/766592ac6318027d7b3c334d8c50ca80818eeff8/wepay.jpg" alt="buy me a drink" width="120"/>
+
 - [Aria2-AriaNg-X docker-compose](#aria2-ariang-x-docker-compose)
   - [应用截图](#应用截图)
   - [为什么会有这个东西](#为什么会有这个东西)
@@ -19,7 +21,6 @@
   - [常见问题 FAQ](#常见问题-faq)
   - [Plex](#plex)
     - [快速运行](#快速运行)
-  - [微信打赏](#微信打赏)
 
 这个项目是提供一个 docker-compose文件，让你可以一步就拥有一个集图形化界面的 Aria2下载（[AriaNg](https://github.com/mayswind/AriaNg)）和在线预览和管理文件的平台：
   * [FileRun](https://www.filerun.com/)
@@ -210,9 +211,3 @@ docker-compose up -d
 
 
 更多Plex 的使用，请前往： <https://www.plex.tv/zh/>
-
-## 微信打赏
-
-如果你喜欢，特别欢迎打赏，给我点动力，持续更新😃🍻🚀。
-
-![打赏](https://github.com/wahyd4/work-in-australia/raw/master/wepay.jpg)

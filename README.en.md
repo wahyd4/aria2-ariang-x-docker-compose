@@ -2,6 +2,8 @@
 
 [中文](https://github.com/wahyd4/aria2-ariang-x-docker-compose/blob/master/README.md) | English
 
+<img src="https://raw.githubusercontent.com/wahyd4/work-in-australia/766592ac6318027d7b3c334d8c50ca80818eeff8/wepay.jpg" alt="buy me a drink" width="120"/>
+
 <!-- TOC -->
 
 - [Aria2-AriaNg-X docker-compose](#aria2-ariang-x-docker-compose)
