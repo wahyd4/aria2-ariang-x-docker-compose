@@ -4,6 +4,8 @@
 
 <img src="https://raw.githubusercontent.com/wahyd4/work-in-australia/766592ac6318027d7b3c334d8c50ca80818eeff8/wepay.jpg" alt="buy me a drink" width="120"/>
 
+> Notice: The English version documentation is not up to date, if you have any issues, please create an issue. Translation pull request is welcome.
+
 <!-- TOC -->
 
 - [Aria2-AriaNg-X docker-compose](#aria2-ariang-x-docker-compose)
