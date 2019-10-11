@@ -2,13 +2,13 @@ version: '3.5'
 
 services:
   nextcloud:
-    image: nextcloud:latest
+    image: arm32v7/nextcloud:latest
     volumes:
       - ./data/nextcloud:/var/www/html:rw # moutn nextcloud files folder
       - ./data:/data:rw # mount your personal data folder
     restart: always
   aria2:
-    image: wahyd4/aria2-ui:nextcloud
+    image: wahyd4/aria2-ui:nextcloud-arm32
     ports:
       - "80:80"
       - "443:443"
