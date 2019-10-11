@@ -2,8 +2,8 @@
   * 首先需要配置 docker compose 文件中，`nextcloud` 下的`volumes` 属性，也就是添加mount 目录。将你需要映射的外部存储目录添加到这里，记得修改完成后，重启本 docker-compose 项目。
   ```yaml
   volumes:
-      - /data/nextcloud:/data
-      - /data:/user-files
+      - /data/nextcloud:/var/www/html
+      - /data:/data
       - /abc:/abc
   ```
   * 在宿主机上执行命令 `sudo chown -R www-data <abc>` #<>这里是你需要修改的目录, 让Nextcloud 有权限读写、管理文件
@@ -30,5 +30,3 @@
 sudo chown -R www-data </abc>  #<>这里是你需要修改的目录
 ```
 如果已经添加了`External Storage`，请从`External Storage`移除该条目录，然后再重新添加该目录，就没问题啦！如果依然还有问题，请回来报告Issue。
-
-
