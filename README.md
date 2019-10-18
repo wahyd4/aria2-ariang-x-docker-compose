@@ -74,6 +74,7 @@ _提示_ 如果你不是在本地安装，请记得替换 localhost 为你的 ip
 ```bash
   git clone https://github.com/wahyd4/aria2-ariang-x-docker-compose.git
   cd aria2-ariang-x-docker-compose/plex-filebrowser
+  # 前往 https://www.plex.tv/claim/ 获取 TOKEN， 并填充至 `plex-filebrowser` 目录下的 `docker-compose.yml`下的 `PLEX_CLAIM`字段。
   docker-compose up -d
 ```
 
@@ -244,7 +245,7 @@ docker-compose up -d
 
 4. 在浏览器中打开 <http://loclahost:32400>，使用 Plex 平台账号登录即可像你在其他地方使用 Plex 一样享受播放、投屏的快乐了。
 
-- File Browser: <http://localhost:8000>
-- AriaNG: <http://localhost:8000/ui/>
+- File Browser: <http://localhost>
+- AriaNG: <http://localhost/ui/>
 
 更多 Plex 的使用，请前往： <https://www.plex.tv/zh/>
