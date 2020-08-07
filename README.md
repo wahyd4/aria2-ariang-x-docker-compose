@@ -1,6 +1,6 @@
 # Aria2-AriaNg-X docker-compose
 
-![Page Views Count](https://badge.home.toozhao.com/svg/aria2-ariang-x-docker-compose)
+[![Page Views Count](https://badge.home.toozhao.com/svg/aria2-ariang-x-docker-compose)](https://badge.home.toozhao.com/svg/aria2-ariang-x-docker-compose "Page views count")
 
 中文 | [English](https://github.com/wahyd4/aria2-ariang-x-docker-compose/blob/master/README.en.md)
 
