@@ -1,5 +1,11 @@
 # Aria2-AriaNg-X docker-compose
 
+<!-- [![Page Views Count](https://badges.toozhao.com/badges/01EGZCMEMXYQQMRN7H8ZWPJXCY/green.svg)](https://badges.toozhao.com/badges/01EGZCMEMXYQQMRN7H8ZWPJXCY/green.svg "Get your own page views count badge on badges.toozhao.com")  -->
+
+<a href="https://badges.toozhao.com" alt="Generate your badge to count for any page views at https://badges.toozhao.com"><img src="https://badges.toozhao.com/badges/01EGZCMEMXYQQMRN7H8ZWPJXCY/green.svg" width=500/></a>
+
+
+
 [中文](https://github.com/wahyd4/aria2-ariang-x-docker-compose/blob/master/README.md) | English
 
 <img src="https://raw.githubusercontent.com/wahyd4/work-in-australia/766592ac6318027d7b3c334d8c50ca80818eeff8/wepay.jpg" alt="buy me a drink" width="120"/>
