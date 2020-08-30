@@ -1,6 +1,9 @@
 # Aria2-AriaNg-X docker-compose
 
-[![Page Views Count](https://badge.home.toozhao.com/svg/aria2-ariang-x-docker-compose)](https://badge.home.toozhao.com/svg/aria2-ariang-x-docker-compose "Page views count")
+<!-- [![Page Views Count](https://badge.home.toozhao.com/svg/aria2-ariang-x-docker-compose)](https://badge.home.toozhao.com/svg/aria2-ariang-x-docker-compose "Page views count") -->
+
+<a href="https://badges.toozhao.com" alt="Generate your badge to count for any page views at https://badges.toozhao.com"><img src="https://badge.home.toozhao.com/svg/aria2-ariang-x-docker-compose" width=500/></a>
+
 
 中文 | [English](https://github.com/wahyd4/aria2-ariang-x-docker-compose/blob/master/README.en.md)
 
