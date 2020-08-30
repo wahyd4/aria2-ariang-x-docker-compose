@@ -27,6 +27,8 @@ services:
       - ./transcode:/transcode # Transcoder temporary directory
       - ./config:/config # Configurations
     environment:
+      - LOG_DEBUG=0
+      - LOG_VERBOSE=0
       - PLEX_CLAIM=claim-7KUpCHxW6yozR56UA1YL # Replace this TOKEN!!!
     restart: unless-stopped
     hostname: "junv-plex-server" # change the name to whatever you like
