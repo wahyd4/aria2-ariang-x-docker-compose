@@ -1,6 +1,16 @@
 # Aria2-AriaNg-X docker-compose
 
+<!-- [![Page Views Count](https://badges.toozhao.com/badges/01EGZCMEMXYQQMRN7H8ZWPJXCY/green.svg)](https://badges.toozhao.com/badges/01EGZCMEMXYQQMRN7H8ZWPJXCY/green.svg "Get your own page views count badge on badges.toozhao.com")  -->
+
+<a href="https://badges.toozhao.com" alt="Generate your badge to count for any page views at https://badges.toozhao.com"><img src="https://badges.toozhao.com/badges/01EGZCMEMXYQQMRN7H8ZWPJXCY/green.svg" width=500/></a>
+
+
+
 [中文](https://github.com/wahyd4/aria2-ariang-x-docker-compose/blob/master/README.md) | English
+
+<img src="https://raw.githubusercontent.com/wahyd4/work-in-australia/766592ac6318027d7b3c334d8c50ca80818eeff8/wepay.jpg" alt="buy me a drink" width="120"/>
+
+> Notice: The English version documentation is not up to date, if you have any issues, please create an issue. Translation pull request is welcome.
 
 <!-- TOC -->
 
@@ -12,6 +22,7 @@
   - [Upgrade](#upgrade)
   - [Advanced features](#advanced-features)
   - [Get your downloaded files](#get-your-downloaded-files)
+  - [FAQ](#faq)
   - [Just want to a standalone image?(e.g. Running in Synology NAS)](#just-want-to-a-standalone-imageeg-running-in-synology-nas)
 
 <!-- /TOC -->
@@ -22,10 +33,12 @@ This repository contains several docker-compose files to help you running a Aria
   * [h5ai](https://larsjung.de/h5ai/)
 
 ## Screenshots
- * AriaNg ![AriaNg](https://raw.githubusercontent.com/wahyd4/aria2-ariang-x-docker-compose/master/images/ariang.png)
- * Filerun ![filerun](https://raw.githubusercontent.com/wahyd4/aria2-ariang-x-docker-compose/master/images/filerun.png)
- * h5ai ![h5ai](https://raw.githubusercontent.com/wahyd4/aria2-ariang-x-docker-compose/master/images/h5ai.png)
- * nextcloud ![nextcloud](https://raw.githubusercontent.com/wahyd4/aria2-ariang-x-docker-compose/master/images/nextcloud.png)
+Name|Screenshot
+:----: | :---:
+ AriaNg|![AriaNg](https://raw.githubusercontent.com/wahyd4/aria2-ariang-x-docker-compose/master/images/ariang.jpg)
+ Filerun|![filerun](https://raw.githubusercontent.com/wahyd4/aria2-ariang-x-docker-compose/master/images/filerun.jpg)
+ h5ai|![h5ai](https://raw.githubusercontent.com/wahyd4/aria2-ariang-x-docker-compose/master/images/h5ai.png)
+nextcloud|![nextcloud](https://raw.githubusercontent.com/wahyd4/aria2-ariang-x-docker-compose/master/images/nextcloud.png)
 
 ## Why this repository
   * By using docker-compose, each container only do one thing and do it well.
@@ -65,7 +78,7 @@ This repository contains several docker-compose files to help you running a Aria
 
   1. h5ai： <http://localhost:8000>
 
-  2. AriaNg： <http://localhost:8000/aria2/> Don't forget the last `/`, the other two docker-composes also need `/`.
+  2. AriaNg： <http://localhost:8000/aria2/>
   ####  Using **Filerun** as the file managment application.
   ```bash
     git clone https://github.com/wahyd4/aria2-ariang-x-docker-compose.git
@@ -94,8 +107,8 @@ This repository contains several docker-compose files to help you running a Aria
   go to the filerun/ h5ai/ nextcloud folder
   ```bash
   docker-compose stop # stop the containers
-  docker rmi -f <the docker image ID>  # delete the wahyd4/aria2-ariang docker image
   git pull origin master # pull latest code
+  docker-compose pull # pull the latest docker images
   docker-compose up -d # running the latest docker images
   ```
 
@@ -106,7 +119,7 @@ This repository contains several docker-compose files to help you running a Aria
 
   ```yaml
   aria2:
-    image: wahyd4/aria2-ariang:filerun
+    image: wahyd4/aria2-ui:filerun
     links:
       - web:file-manager
     ports:
@@ -119,13 +132,17 @@ This repository contains several docker-compose files to help you running a Aria
 ## Get your downloaded files
   In docker-compose, we used `/data` as the docker volumn folder to storage all kinds of files. So you can find your files in `/data`
 
+## FAQ
+
+  * Have no rights to manage the files you downloaded? Considering using `root` user to run docker program. Please refer: <https://askubuntu.com/questions/477551/how-can-i-use-docker-without-sudo>
+  * Doesn't support ARM CPUs? Currently there is no plan shortly to release a docker-compose version to support ARM, but recommend you try [`wahyd4/aria2-ui:arm64`](https://github.com/wahyd4/aria2-ariang-docker)
 ## Just want to a standalone image?(e.g. Running in Synology NAS)
   ```bash
-    docker run --rm  -p 8000:80  -p 6800:6800 -v ~/data/:/data wahyd4/aria2-ui
+    docker run --rm  -p 80:80  -p 443:443 -v ~/data/:/data wahyd4/aria2-ui
   ```
-  `8000` is the exposed port of AriaNg， `~/data/` is your files folder.
+  `8000` is the exposed port of AriaNg， `~/data/` is the data folder on your host machine(outside docker).
 
-  * Aria2: <http://localhost:8000>
-  * FileManger: <http://localhost:8000/files>
+  * FileBrowser: <http://localhost:8000>
+  * AriaNG: <http://localhost:8000/ui>
 
   More examples please refer: <https://github.com/wahyd4/aria2-ariang-docker>

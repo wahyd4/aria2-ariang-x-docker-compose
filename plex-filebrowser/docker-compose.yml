@@ -1,0 +1,44 @@
+version: "3"
+
+services:
+  filebrowser:
+    image: wahyd4/aria2-ui:latest
+    ports:
+      - "80:80"
+      - "443:443"
+    volumes:
+      - ./data:/data
+    #   - /some_folder:/root/conf/key
+    #   - ~/test/aria2.conf:/root/conf/aria2.conf
+    environment:
+      - PUID=1000
+      - PGID=1000
+      # - DOMAIN=https://subdomain.example.com
+      # - SSL=true
+      # - RPC_SECRET=Hello
+      # - ARIA2_USER=admin
+      # - ARIA2_PWD=password
+      # - ENABLE_AUTH=true
+    restart: unless-stopped
+  plex:
+    image: spritsail/plex-media-server
+    volumes:
+      - ./data:/media:rw # The media folder
+      - ./transcode:/transcode # Transcoder temporary directory
+      - ./config:/config # Configurations
+    environment:
+      - LOG_DEBUG=0
+      - LOG_VERBOSE=0
+      - PLEX_CLAIM=claim-7KUpCHxW6yozR56UA1YL # Replace this TOKEN!!!
+    restart: unless-stopped
+    hostname: "junv-plex-server" # change the name to whatever you like
+    ports:
+      - "32400:32400" # The web port
+      - "3005:3005" # The following ports are optional
+      - "8324:8324"
+      - "32469:32469"
+      - "1900:1900"
+      - "32410:32410"
+      - "32412:32412"
+      - "32413:32413"
+      - "32414:32414"

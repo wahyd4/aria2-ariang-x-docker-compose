@@ -1,21 +1,22 @@
-version: '2'
+version: '3'
 
 services:
   h5ai:
     image: bixidock/h5ai
     volumes:
-      - /data:/var/www
+      - ./data:/var/www:rw
     restart: always
   aria2:
-    image: wahyd4/aria2-ariang:caddy-h5ai
+    image: wahyd4/aria2-ui:h5ai
     ports:
       - "8000:80"
       - "443:443"
       - "6800:6800"
-    volumes_from:
-      - h5ai
+    volumes:
+      - ./data:/var/www:rw
     # volumes:
     #   - /some_folder:/root/conf/key
+    #   - ~/test/aria2.conf:/root/conf/aria2.conf
     environment:
       - DOMAIN=:80
       # - SSL=true
@@ -26,4 +27,3 @@ services:
     links:
       - h5ai:file-manager
     restart: always
-

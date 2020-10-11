@@ -18,10 +18,10 @@ services:
       - db
     image: afian/filerun
     volumes:
-      - /data:/user-files
+      - ./data:/user-files:rw
     restart: always
   aria2:
-    image: wahyd4/aria2-ariang:caddy-filerun
+    image: wahyd4/aria2-ui:filerun
     links:
       - web:file-manager
     ports:
@@ -37,7 +37,8 @@ services:
       # - ENABLE_AUTH=true
     # volumes:
     #   - /some_folder:/root/conf/key
-    volumes_from:
-      - web
+    #   - ~/test/aria2.conf:/root/conf/aria2.conf
+    volumes:
+      - ./data:/user-files:rw
     restart: always
 
