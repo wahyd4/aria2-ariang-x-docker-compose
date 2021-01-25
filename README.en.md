@@ -1,8 +1,6 @@
 # Aria2-AriaNg-X docker-compose
 
-<!-- [![Page Views Count](https://badges.toozhao.com/badges/01EGZCMEMXYQQMRN7H8ZWPJXCY/green.svg)](https://badges.toozhao.com/badges/01EGZCMEMXYQQMRN7H8ZWPJXCY/green.svg "Get your own page views count badge on badges.toozhao.com")  -->
-
-<a href="https://badges.toozhao.com/stats/01EGZCMEMXYQQMRN7H8ZWPJXCY" alt="Generate your badge to count for any page views at https://badges.toozhao.com"><img src="https://badges.toozhao.com/badges/01EGZCMEMXYQQMRN7H8ZWPJXCY/green.svg" width=500/></a>
+<a href="https://badges.toozhao.com/stats/01EGZCMEMXYQQMRN7H8ZWPJXCY" alt="Generate your badge to count for any page views at https://badges.toozhao.com"><img src="https://badges.toozhao.com/badges/01EGZCMEMXYQQMRN7H8ZWPJXCY/green.svg"/></a>
 
 
 
