@@ -1,5 +1,7 @@
 # Aria2-AriaNg-X docker-compose
 
+> ‼️推荐使用单容器版本 <https://github.com/wahyd4/aria2-ariang-docker>
+
 <!-- [![Page Views Count](https://badges.toozhao.com/svg/aria2-ariang-x-docker-compose)](https://badges.toozhao.com/stats/aria2-ariang-x-docker-compose "Page views count") -->
 
 <a href="https://badges.toozhao.com/stats/aria2-ariang-x-docker-compose" alt="Generate your badge to count for any page views at https://badges.toozhao.com"><img src="https://badges.toozhao.com/svg/aria2-ariang-x-docker-compose" /></a>
