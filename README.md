@@ -18,7 +18,7 @@
   - [安装与使用](#安装与使用)
     - [使用 Filebrowser 安装](#使用-filebrowser-安装)
     - [使用 **h5ai** 作为在线文件查看和播放](#使用-h5ai-作为在线文件查看和播放)
-    - [使用 **Filerun** 作为在线文件管理器](#使用-filerun-作为在线文件管理器)
+    - [~~使用 **Filerun** 作为在线文件管理器~~](#使用-filerun-作为在线文件管理器)
     - [使用 **Nextcloud** 安装](#使用-nextcloud-安装)
     - [ARM Nextcloud](#arm-nextcloud)
   - [升级](#升级)
@@ -31,7 +31,7 @@
 
 这个项目是提供一个 docker-compose 文件，让你可以一步就拥有一个集图形化界面的 Aria2 下载（[AriaNg](https://github.com/mayswind/AriaNg)）和在线预览和管理文件的平台：
 
-- [FileRun](https://www.filerun.com/)
+- [~~FileRun~~](https://www.filerun.com/)
 - [Nextcloud](https://nextcloud.com/)
 - [h5ai](https://larsjung.de/h5ai/)
 - [Filebrowser](https://filebrowser.xyz/)
@@ -41,7 +41,7 @@
 |    名称     |                                                       截图                                                       |
 | :---------: | :--------------------------------------------------------------------------------------------------------------: |
 |   AriaNg    |    ![AriaNg](https://raw.githubusercontent.com/wahyd4/aria2-ariang-x-docker-compose/master/images/ariang.jpg)    |
-|   Filerun   |   ![filerun](https://raw.githubusercontent.com/wahyd4/aria2-ariang-x-docker-compose/master/images/filerun.jpg)   |
+|   ~~Filerun~~   |   ![filerun](https://raw.githubusercontent.com/wahyd4/aria2-ariang-x-docker-compose/master/images/filerun.jpg)   |
 |    h5ai     |      ![h5ai](https://raw.githubusercontent.com/wahyd4/aria2-ariang-x-docker-compose/master/images/h5ai.png)      |
 |  nextcloud  | ![nextcloud](https://raw.githubusercontent.com/wahyd4/aria2-ariang-x-docker-compose/master/images/nextcloud.png) |
 | Filebrowser |             ![filebrowser](https://github.com/wahyd4/aria2-ariang-docker/raw/master/filemanager.png)             |
@@ -54,7 +54,7 @@
 
 ## 比较 FileBrowser, Filerun， h5ai 和 Nextcloud
 
-| 比较类别        | Filerun               | Nextcloud                                           | h5ai                                           | Filebrowser          |
+| 比较类别        | ~~Filerun~~               | Nextcloud                                           | h5ai                                           | Filebrowser          |
 | --------------- | --------------------- | --------------------------------------------------- | ---------------------------------------------- | -------------------- |
 | Docker 镜像大小 | 200M                  | 500M                                                | 20M                                            | 40M                  |
 | 功能            | 功能少                | 功能强大                                            | 功能少                                         | 功能足够             |
@@ -107,8 +107,8 @@ _提示_ 如果你不是在本地安装，请记得替换 localhost 为你的 ip
 
 2. AriaNg： <http://localhost:8000/aria2/>
 
-### 使用 **Filerun** 作为在线文件管理器
-
+### ~~使用 **Filerun** 作为在线文件管理器~~
+因为Filerun官方将其产品改成付费版，并不再提供免费版本了，因此Filerun版在这里也不能再使用了。☹️
 ```bash
   git clone https://github.com/wahyd4/aria2-ariang-x-docker-compose.git
   cd aria2-ariang-x-docker-compose/filerun
